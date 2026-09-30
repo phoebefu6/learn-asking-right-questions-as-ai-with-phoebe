@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- social:start -->
+<meta name="description" content="Session 1 of 6. Why an operations director and an AI developer can sit in the same meeting and leave with two different projects, why the current-way door opens widest for anyone building an assistant, and the teach-back line that lets the business person learn how AI work thinks while she answers.">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Learn with Phoebe">
+<meta property="og:title" content="The gap, from the AI developer's chair - learn asking the right questions as an AI developer with phoebe">
+<meta property="og:description" content="Session 1 of 6. Two tunes and the word AI, one supplier thread watched end to end, lookups against decisions, and the one sentence that turns a question into a lesson.">
+<meta property="og:url" content="https://phoebefu6.github.io/learn-asking-right-questions-as-ai-with-phoebe/courses/01-the-gap-from-the-ai-developers-chair.html">
+<meta property="og:image" content="https://phoebefu6.github.io/learn-asking-right-questions-as-ai-with-phoebe/assets/og-cover.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="The gap, from the AI developer's chair - learn asking the right questions as an AI developer with phoebe">
+<meta name="twitter:description" content="Session 1 of 6. The gap, the current-way door, the teach-back line.">
+<meta name="twitter:image" content="https://phoebefu6.github.io/learn-asking-right-questions-as-ai-with-phoebe/assets/og-cover.png">
+<!-- social:end -->
+<title>Session 1 · The gap, from the AI developer's chair - learn asking the right questions as an AI developer with phoebe</title>
+<link rel="stylesheet" href="../assets/style.css?v=1">
+</head>
+<body>
+
+<div class="toolbar">
+  <div class="wrap">
+    <span class="crumb"><a href="../index.html">learn-asking-right-questions-as-ai-with-phoebe</a> / Session 1 of 6</span>
+    <button class="btn" id="toggle-all" type="button">Expand all</button>
+    <button class="btn primary" id="zoom-toggle" type="button">Projector zoom: off</button>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="wrap">
+    <div class="eyebrow">Learn Asking the Right Questions as an AI Developer with Phoebe · Session 1 of 6</div>
+    <h1>The gap, from the <span class="accent">AI developer's chair</span></h1>
+    <p class="sub">An operations director asks whether AI can answer the supplier WhatsApps. An AI developer hears a model, a prompt and an integration, and starts asking about thread history and hallucination rates. Six weeks later there is a bot that replies to suppliers, it is fluent, and she switches it off, because the thing she was worried about was her area managers stuck in a van on their phones instead of walking into outlets, and the first time the bot said yes to a substitute drug nobody had checked, it became a compliance problem. Neither of them was careless. They used the same word, AI, for different things. Tonight is the way of noticing: why the gap opens, why the current way of working is the door an AI developer opens widest, and the one sentence that lets her learn how AI work thinks while she answers you.</p>
+    <div class="chip-row">
+      <span class="chip level">🟡 Core</span>
+      <span class="chip audience">AI developers, and anyone asked to "add AI"</span>
+      <span class="chip audience">No code. A pen.</span>
+      <span class="chip time">45 min</span>
+    </div>
+    <div class="agenda">
+      <span class="a1" style="flex:1">0-3 · Welcome</span>
+      <span class="a2" style="flex:4">3-18 · The gap, the widest door, the teach-back</span>
+      <span class="a3" style="flex:5">18-40 · Build-along: your door sheet</span>
+      <span class="a4" style="flex:1">40-45 · Q&amp;A</span>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <section class="section" id="intro">
+    <div class="section-kicker">
+      <span class="klabel">Part 0</span>
+      <h2>Where we start</h2>
+    </div>
+    <p class="lede">Most AI projects that fail, fail in the first meeting, and they fail quietly. The business person names a tool because "AI" is the word she has for "make this problem go away", the developer hears a build, and both walk out believing they agreed. The running case for all six sessions is Harbourline, an invented chain of 38 pharmacy and clinic outlets across Singapore and Malaysia, and its operations director Adeline Tan. She has never written a prompt and does not need to. She has a request, three area managers who live in WhatsApp, and a board that keeps asking what she is doing with AI. You have 45 minutes with her.</p>
+
+    <div class="legend">
+      <span class="pill">🎫 Clear all three quiz questions to stamp your passport</span>
+      <span class="pill">Live = presented in the 45 minutes</span>
+      <span class="pill">Self-study = the full depth, after class</span>
+      <span class="pill">★ Build-along = write it yourself</span>
+    </div>
+
+    <div class="callout win">
+      <p><strong>★ What you walk out with tonight.</strong> A one-page door sheet for "can AI answer the WhatsApps", two open questions behind each door written in the past or present tense, a plain teach-back line attached to each one, and a mark on the current-way row, the door an AI developer opens first and widest. Session 3 puts that sheet in front of Adeline and counts what it gets out of her.</p>
+    </div>
+  </section>
+
+  <section class="section" id="part-1">
+    <div class="section-kicker">
+      <span class="klabel">Part 1 · covers why the gap opens, and what the word AI does to it</span>
+      <h2>Two tunes, and the word AI</h2>
+      <span class="tag concept">5 min live</span>
+    </div>
+    <p class="lede">In 1990 a Stanford psychology student, Elizabeth Newton, split people into tappers and listeners. Tappers picked a well-known song and tapped its rhythm on a table; listeners had to name it. As reported by Chip and Dan Heath, tappers guessed the listeners would get about half the songs. Listeners got 3 of 120. The tapper cannot stop hearing the tune, so the taps sound obvious; the listener hears knocking. Every discovery meeting has a tapper on each side of the table, and the word AI is the loudest knocking there is.</p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 330" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="A hand-drawn table with a tapper on the left, a tune floating above her head, and a listener on the right hearing only knocks. The tappers' guess, about 50 percent of songs named, sits against the listeners' result, 3 of 120, as reported. Below, the same scene redrawn: the operations director, whose tune is two outlet visits a day instead of one, beside a van where a manager sits on the phone; the AI developer on the right hears the words can AI answer the WhatsApps; what gets built is a bot in a chat window, and the managers still visit one outlet a day.">
+        <defs>
+          <filter id="s1aSk" x="-3%" y="-3%" width="106%" height="106%"><feTurbulence type="fractalNoise" baseFrequency="0.02" numOctaves="2" seed="11" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="2.4" xChannelSelector="R" yChannelSelector="G"/></filter>
+          <pattern id="s1aHc" patternUnits="userSpaceOnUse" width="7" height="7" patternTransform="rotate(-38)"><line x1="0" y1="0" x2="0" y2="7" stroke="#047857" stroke-width="1" opacity=".5"/></pattern>
+          <marker id="s1aAr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M1 1 L9 5 L1 9" fill="none" stroke="#0F231B" stroke-width="1.6" stroke-linecap="round"/></marker>
+        </defs>
+        <style>
+          .s1aH { font: 800 12px Inter, sans-serif; fill: #0F231B; }
+          .s1aL { font: 600 12px Inter, sans-serif; fill: #0F231B; }
+          .s1aS { font: 400 11px Inter, sans-serif; fill: #46605A; }
+          .s1aB { font: 800 11px Inter, sans-serif; fill: #6A1F50; }
+          .s1aV { font: 800 20px Inter, sans-serif; fill: #065F46; }
+          .s1aN { font: 400 12px Inter, sans-serif; fill: #46605A; }
+        </style>
+
+        <text class="s1aH" x="30" y="26">TAPPERS AND LISTENERS, 1990</text>
+        <text class="s1aS" x="250" y="26">the tapper hears the whole song; the listener hears a table being knocked</text>
+
+        <g filter="url(#s1aSk)" fill="none" stroke="#0F231B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <!-- tapper -->
+          <circle cx="90" cy="96" r="16"/>
+          <path d="M60 150 C66 122 114 122 120 150"/>
+          <!-- the tune -->
+          <path d="M112 70 C102 50 130 36 146 46 C160 30 204 34 204 52 C228 54 228 80 206 82 L122 82 C104 82 102 74 112 70 Z" fill="#FBE9F4" stroke="#8E2C6B"/>
+          <!-- table and taps -->
+          <path d="M150 150 L330 150" stroke-width="3"/>
+          <path d="M162 150 L162 176 M318 150 L318 176"/>
+          <path d="M178 136 L178 126 M196 138 L196 130 M214 134 L214 126 M232 138 L232 132" stroke="#46605A"/>
+          <!-- listener -->
+          <circle cx="380" cy="96" r="16"/>
+          <path d="M350 150 C356 122 404 122 410 150"/>
+          <rect x="300" y="44" width="150" height="34" rx="6" transform="rotate(0.8 375 61)" fill="#FFFFFF" stroke="#C3DDD3"/>
+          <!-- the two numbers -->
+          <rect x="500" y="56" width="160" height="82" rx="8" transform="rotate(-0.5 580 97)" fill="#ECFDF5"/>
+          <rect x="690" y="56" width="160" height="82" rx="8" transform="rotate(0.6 770 97)" fill="#FBE9F4" stroke="#8E2C6B"/>
+          <!-- second scene: Harbourline -->
+          <path d="M40 200 L840 200" stroke="#C3DDD3" stroke-dasharray="6 5"/>
+          <circle cx="90" cy="252" r="14"/>
+          <path d="M64 298 C70 274 110 274 116 298"/>
+          <path d="M112 228 C100 206 130 192 148 202 C164 186 214 190 214 208 C240 210 240 240 214 244 L122 244 C102 244 100 236 112 228 Z" fill="#FBE9F4" stroke="#8E2C6B"/>
+          <!-- the van, with a manager on the phone -->
+          <rect x="160" y="258" width="74" height="30" rx="4" transform="rotate(-0.8 197 273)" fill="#FFFFFF"/>
+          <path d="M234 266 L256 266 L268 278 L268 288 L234 288"/>
+          <circle cx="182" cy="292" r="6" fill="#FFFFFF"/>
+          <circle cx="250" cy="292" r="6" fill="#FFFFFF"/>
+          <rect x="241" y="269" width="8" height="13" rx="2" fill="#ECFDF5"/>
+          <!-- the developer -->
+          <circle cx="380" cy="252" r="14"/>
+          <path d="M354 298 C360 274 400 274 406 298"/>
+          <rect x="300" y="206" width="150" height="42" rx="6" transform="rotate(-0.6 375 227)" fill="#FFFFFF" stroke="#C3DDD3"/>
+          <path d="M456 229 L560 229" marker-end="url(#s1aAr)"/>
+          <rect x="570" y="210" width="280" height="76" rx="8" transform="rotate(0.4 710 248)" fill="url(#s1aHc)"/>
+        </g>
+
+        <text class="s1aS" x="120" y="64">the song, whole</text>
+        <text class="s1aL" x="90" y="176" text-anchor="middle">tapper</text>
+        <text class="s1aS" x="375" y="65" text-anchor="middle">knock, knock, knock-knock</text>
+        <text class="s1aL" x="380" y="176" text-anchor="middle">listener</text>
+        <text class="s1aS" x="580" y="80" text-anchor="middle">tappers predicted</text>
+        <text class="s1aV" x="580" y="108" text-anchor="middle">about 50%</text>
+        <text class="s1aS" x="580" y="128" text-anchor="middle">of songs would be named</text>
+        <text class="s1aB" x="770" y="80" text-anchor="middle">listeners named</text>
+        <text class="s1aV" x="770" y="108" text-anchor="middle">3 of 120</text>
+        <text class="s1aB" x="770" y="128" text-anchor="middle">as reported</text>
+
+        <text class="s1aS" x="118" y="219">two outlets a day,</text>
+        <text class="s1aS" x="118" y="235">not one</text>
+        <text class="s1aL" x="90" y="318" text-anchor="middle">Adeline</text>
+        <text class="s1aS" x="225" y="316" text-anchor="middle">in the van, on the phone</text>
+        <text class="s1aS" x="375" y="223" text-anchor="middle">"can AI answer</text>
+        <text class="s1aS" x="375" y="238" text-anchor="middle">the WhatsApps?"</text>
+        <text class="s1aL" x="380" y="318" text-anchor="middle">the AI developer</text>
+        <text class="s1aB" x="584" y="234">WHAT GETS BUILT</text>
+        <text class="s1aS" x="584" y="252">a bot in a chat window, six weeks,</text>
+        <text class="s1aS" x="584" y="268">and the managers still visit one</text>
+        <text class="s1aS" x="584" y="283">outlet a day</text>
+
+      </svg>
+      <figcaption>🔍 Click to zoom - the bottom row is the top row with the tune replaced by an operations problem and the knocking replaced by the word AI</figcaption>
+    </figure>
+
+    <details class="card" open>
+      <summary><span class="mode live">Live</span>Her tune, his tune, and why neither side can hear the other's<span class="mini">3 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Newton's tappers were not bad at tapping. They were unable to <em>un-know</em> the song while they tapped, so every knock arrived with the melody attached, and they judged the listener's chances from inside that experience. Economists had named this a year earlier: Camerer, Loewenstein and Weber called it the curse of knowledge, the finding that better-informed people cannot fully set their information aside when predicting what less-informed people will understand.</p>
+        <p>In an AI discovery meeting there are two tunes. Adeline's is the operational worry. When she says "can AI answer the WhatsApps", she means "get my managers back into the outlets": head office expects each area manager to visit two outlets a day, they manage one because of the phone, and that is what she is measured on. The developer's tune is the machinery: a model, a prompt, an integration with a messaging platform, a way of reading the thread history. Each hears their own tune behind every word the other says. Both leave sure they agreed.</p>
+        <p>The gap is not closed by her learning what a prompt is, or by you learning pharmacy. It is closed by <strong>questions that make the tune audible</strong>: about the workflow as it happens today, which steps in it a person must keep, and what she would see if it worked, asked in words that need no translation, with the reason for asking said out loud. That is the rest of tonight.</p>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>Why the word AI widens the gap instead of naming it<span class="mini">2 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Most requests arrive as a solution: a dashboard, a report, a model. "AI" is a solution with an unusual property: it sounds like it could be anything, so each side fills it with whatever they already had in mind. Adeline has two reasons for saying it. She wants her managers in outlets, and the board wants the word AI on a slide. Those are different outcomes, and only one of them is a test you could pass.</p>
+        <p>The developer's version of the trap is to answer the word with a build plan. "Should we fine-tune, or go retrieval-augmented over the thread history?" is a good question between two developers and knocking to a person who runs pharmacies. On the bench in session 3, opening with five technical questions like it is the lowest-scoring way of running the meeting: 11 points, against 54 for the same 45 minutes walked door by door. The words are not wrong. They are the wrong tune for the room.</p>
+      </div>
+    </details>
+
+    <div class="callout example">
+      <span class="ex-pill">Real world</span>
+      <p><strong>The bot she already switched off.</strong> A constructed case, but the shape is one every AI developer meets. Last year Harbourline's POS vendor switched on a chatbot, it answered a customer's prescription question wrongly, and Adeline switched it off within a week. She will not mention this unless you ask whether she has tried anything that answers on its own, and it is the single most important fact about what she will trust. An assistant that replies to suppliers by itself is the same thing in her mind, and she is right to think so: one yes to a substitute drug nobody checked is not a customer-service slip, it is a wrong product on a pharmacy shelf.</p>
+    </div>
+  </section>
+
+  <section class="section" id="part-2">
+    <div class="section-kicker">
+      <span class="klabel">Part 2 · covers the door an AI developer opens widest</span>
+      <h2>The current-way door, opened widest</h2>
+      <span class="tag concept">6 min live</span>
+    </div>
+    <p class="lede">Every discovery meeting walks the same six doors: outcome, decision, current way, data state, constraints, success and partnership. They are stated in full, with the question behind each and where each move comes from, in <a href="https://phoebefu6.github.io/learn-asking-right-questions-as-da-with-phoebe/courses/01-why-the-gap-and-the-six-doors.html">the corridor, session 1 of the data analyst sibling</a>; read it once and come back. For an AI developer one door matters more than the rest. Whatever you build will replace or assist a step a person does today, so the facts that decide whether it is safe sit behind door 3: the workflow as it happens, how often it goes wrong, which replies are lookups and which are decisions, and who checks the output.</p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 360" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="One supplier WhatsApp thread drawn as a row of five steps. The supplier confirms items and prices in its own format; the manager finds the outlet's original order in another group; the manager matches items, prices and product nicknames by eye; sometimes a substitute or a price change is offered, which needs a record; the manager replies, a plain OK about four times in five. Four steps are tagged lookup and can be drafted by an assistant. The substitute step is tagged decision, drawn in the accent colour, with a person beside it: only the area manager may say yes. A note: about one confirmation in twenty carries a wrong price or a substitute, and that step stays with a person.">
+        <defs>
+          <filter id="s1bSk" x="-3%" y="-3%" width="106%" height="106%"><feTurbulence type="fractalNoise" baseFrequency="0.02" numOctaves="2" seed="23" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="2.4" xChannelSelector="R" yChannelSelector="G"/></filter>
+          <pattern id="s1bHc" patternUnits="userSpaceOnUse" width="7" height="7" patternTransform="rotate(-38)"><line x1="0" y1="0" x2="0" y2="7" stroke="#047857" stroke-width="1" opacity=".5"/></pattern>
+          <marker id="s1bAr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M1 1 L9 5 L1 9" fill="none" stroke="#0F231B" stroke-width="1.6" stroke-linecap="round"/></marker>
+        </defs>
+        <style>
+          .s1bH { font: 800 12px Inter, sans-serif; fill: #0F231B; }
+          .s1bL { font: 600 12px Inter, sans-serif; fill: #0F231B; }
+          .s1bS { font: 400 11px Inter, sans-serif; fill: #46605A; }
+          .s1bB { font: 800 11px Inter, sans-serif; fill: #6A1F50; }
+          .s1bW { font: 800 11px Inter, sans-serif; fill: #FFFFFF; letter-spacing: .05em; }
+          .s1bA { font: 700 11px Inter, sans-serif; fill: #047857; }
+          .s1bN { font: 400 12px Inter, sans-serif; fill: #46605A; }
+        </style>
+
+        <text class="s1bH" x="30" y="26">ONE THREAD, END TO END, EVERY STEP TAGGED</text>
+        <text class="s1bS" x="350" y="26">watched on a manager's phone before anything is designed</text>
+
+        <g filter="url(#s1bSk)" fill="none" stroke="#0F231B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <!-- five steps, 150 wide, 18 gap -->
+          <rect x="30" y="56" width="150" height="100" rx="8" transform="rotate(-0.4 105 106)" fill="#FFFFFF"/>
+          <rect x="198" y="56" width="150" height="100" rx="8" transform="rotate(0.5 273 106)" fill="#FFFFFF"/>
+          <rect x="366" y="56" width="150" height="100" rx="8" transform="rotate(-0.3 441 106)" fill="#FFFFFF"/>
+          <rect x="534" y="56" width="150" height="100" rx="8" transform="rotate(0.4 609 106)" fill="#FBE9F4" stroke="#8E2C6B"/>
+          <rect x="702" y="56" width="150" height="100" rx="8" transform="rotate(-0.5 777 106)" fill="#FFFFFF"/>
+          <!-- arrows between steps -->
+          <path d="M182 106 L194 106" marker-end="url(#s1bAr)"/>
+          <path d="M350 106 L362 106" marker-end="url(#s1bAr)"/>
+          <path d="M518 106 L530 106" marker-end="url(#s1bAr)"/>
+          <path d="M686 106 L698 106" marker-end="url(#s1bAr)"/>
+          <!-- tags -->
+          <rect x="60" y="168" width="90" height="22" rx="11" fill="#047857" stroke="#047857"/>
+          <rect x="228" y="168" width="90" height="22" rx="11" fill="#047857" stroke="#047857"/>
+          <rect x="396" y="168" width="90" height="22" rx="11" fill="#047857" stroke="#047857"/>
+          <rect x="559" y="168" width="100" height="22" rx="11" fill="#8E2C6B" stroke="#8E2C6B"/>
+          <rect x="732" y="168" width="90" height="22" rx="11" fill="#047857" stroke="#047857"/>
+          <!-- the draftable bracket under steps 1 to 3 -->
+          <path d="M40 206 L40 214 L506 214 L506 206" stroke="#047857"/>
+          <!-- the person who keeps the decision -->
+          <circle cx="609" cy="226" r="12" fill="#FBE9F4" stroke="#8E2C6B"/>
+          <path d="M587 264 C593 244 625 244 631 264" stroke="#8E2C6B"/>
+          <!-- a phone in her hand -->
+          <rect x="632" y="238" width="10" height="16" rx="2" transform="rotate(8 637 246)" fill="#FFFFFF"/>
+        </g>
+
+        <text class="s1bL" x="42" y="80">Supplier confirms</text>
+        <text class="s1bS" x="42" y="100">items and prices,</text>
+        <text class="s1bS" x="42" y="115">in its own format;</text>
+        <text class="s1bS" x="42" y="130">36 suppliers, 36 ways</text>
+
+        <text class="s1bL" x="210" y="80">Find the order</text>
+        <text class="s1bS" x="210" y="100">the outlet's request</text>
+        <text class="s1bS" x="210" y="115">sits in another</text>
+        <text class="s1bS" x="210" y="130">WhatsApp group</text>
+
+        <text class="s1bL" x="378" y="80">Match by eye</text>
+        <text class="s1bS" x="378" y="100">items, prices, and</text>
+        <text class="s1bS" x="378" y="115">the outlets' own</text>
+        <text class="s1bS" x="378" y="130">product nicknames</text>
+
+        <text class="s1bB" x="546" y="80">Substitute offered</text>
+        <text class="s1bS" x="546" y="100">or a price change;</text>
+        <text class="s1bS" x="546" y="115">pharmacy products</text>
+        <text class="s1bS" x="546" y="130">need a record by law</text>
+
+        <text class="s1bL" x="714" y="80">Reply</text>
+        <text class="s1bS" x="714" y="100">OK, or a query;</text>
+        <text class="s1bS" x="714" y="115">about four in five</text>
+        <text class="s1bS" x="714" y="130">end in a plain OK</text>
+
+        <text class="s1bW" x="105" y="183" text-anchor="middle">LOOKUP</text>
+        <text class="s1bW" x="273" y="183" text-anchor="middle">LOOKUP</text>
+        <text class="s1bW" x="441" y="183" text-anchor="middle">LOOKUP</text>
+        <text class="s1bW" x="609" y="183" text-anchor="middle">DECISION</text>
+        <text class="s1bW" x="777" y="183" text-anchor="middle">LOOKUP</text>
+
+        <text class="s1bA" x="40" y="234">an assistant can draft these: it looks up, matches, and shows the match it made</text>
+        <text class="s1bB" x="609" y="286" text-anchor="middle">only the area manager</text>
+        <text class="s1bB" x="609" y="301" text-anchor="middle">may say yes</text>
+        <text class="s1bS" x="777" y="226" text-anchor="middle">about forty threads</text>
+        <text class="s1bS" x="777" y="241" text-anchor="middle">a day, per manager</text>
+
+        <text class="s1bN" x="30" y="338">About one confirmation in twenty carries a wrong price or a substitute. That step stays with a person.</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - four steps are lookups an assistant can draft; the plum one is a decision, and it keeps a person beside it</figcaption>
+    </figure>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>Watch one thread before you design anything<span class="mini">2 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>The first question an AI developer asks is not about data or models. It is "show me one thread from yesterday, start to finish. What did you do at each message?" Adeline's answer, drawn above, is the spec nobody wrote. A supplier sends a confirmation with items and prices. The manager checks it against what the outlet asked for, which lives in a different WhatsApp group. The manager replies OK or queries. About forty threads a day per manager, and about four in five end in a plain OK.</p>
+        <p>Watching one thread tells you three things no dataset would. The work is a <strong>match between two messages</strong>, not a reply to one, so the real project may be the second message. The work happens on a phone, so the design lives there. And most of it is routine, which is the part an assistant could safely draft, while the rest is where the person has to stay.</p>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>Lookups and decisions: the split every assistant rests on<span class="mini">2 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Split every step of the thread into one of two kinds. A <strong>lookup</strong> is a step where the right answer already exists somewhere: does this price match the price list, is this the item the outlet asked for, when is the delivery. A <strong>decision</strong> is a step where a person chooses and owns the choice. At Harbourline one kind of reply is a decision: accepting a substitute product or a price change. Only the area manager may say yes to it. Delivery times just need to reach the outlet; nobody decides anything about them.</p>
+        <p>The line matters because the cost of a wrong answer is not the same on each side. Pharmacy products need a substitution record by law, and a wrong drug on a shelf is not a customer-service issue. So you ask how often it goes wrong today, and her answer, once she trusts you a little, is that about one confirmation in twenty has a wrong price or a substitute in it. The managers catch most of them. That catch rate is the bar: any assistant has to do at least as well, and the catching is the part a person keeps.</p>
+        <p>You do not draw the line yourself. You ask her where it is, because it is her line to draw and her name on the record.</p>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>Check the non-ML answer before the ML one<span class="mini">2 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Google's introduction to machine learning problem framing makes a point that most AI projects skip: before building a model, check whether a simpler, non-ML solution would solve the problem, and define what success looks like before anything is built. It reads as caution. In a discovery meeting it is a question you owe the person across the table.</p>
+        <p>Harbourline has at least two non-ML answers sitting in the current-way door. Nobody keeps a record of what was decided; the thread is the record, and when an area manager left in March her phone went with her. A shared decision log fixes that with no model at all. And the supplier contracts renew in three months, so a standard confirmation format could be written into them. You only find either by watching the thread first. Session 5 turns both into candidate projects, beside the assistant that only drafts.</p>
+      </div>
+    </details>
+
+    <div class="callout tip">
+      <p><strong>Why current way first, and what it is worth.</strong> Session 3 counts it. On the bench, the Six Doors walked in printed order score 54; the same doors tuned for an AI developer, current way first and widest, score 55. One point, and that is the honest number: her request is already about the current way, so the printed order asks the lookups-versus-decisions question by minute 12 and hears the one-in-twenty error rate by minute 16 anyway. The order is a habit worth having. What moves the score by forty points is the kind of question, which is Part 3.</p>
+    </div>
+
+    <div class="callout example">
+      <span class="ex-pill">Real world</span>
+      <p><strong>The record that walked out of the door.</strong> Still the constructed case. In March one of Harbourline's area managers left, and her phone went with her. Every substitute she had accepted, every price she had queried, every OK she had sent, lived in WhatsApp threads on a personal number. Nobody had asked where a decision lives once a thread is done, because the thread felt like the record. An assistant built without that question would have added a faster way of making decisions to a system with no way of keeping them. The first useful output here is a log, before it is a single answer.</p>
+    </div>
+  </section>
+
+  <section class="section" id="part-3">
+    <div class="section-kicker">
+      <span class="klabel">Part 3 · covers the teach-back line for an AI developer</span>
+      <h2>Why I am asking, in one sentence</h2>
+      <span class="tag concept">4 min live</span>
+    </div>
+    <p class="lede">Every open question in the bank comes with a second sentence: a plain statement of why you are asking it. "The worst case sets how much checking the assistant needs." Said out loud, it does three things at once. It makes the question feel like a reason rather than an interrogation, it earns trust, and it teaches the business person one true thing about how AI work is decided. By the end of the meeting Adeline knows why an assistant should draft and a person should decide, and nobody showed her a slide.</p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 310" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="A hand-drawn exchange. On the left the AI developer's speech bubble has two parts: the question, what is the worst thing that happens if a reply is wrong, and underneath the teach-back, the worst case sets how much checking the assistant needs, a wrong delivery time and a wrong drug are not the same mistake. Three arrows leave the bubble: one to a fact that comes back, about one confirmation in twenty has a wrong price or a substitute; one to a lesson that stays with her, the assistant drafts and a person decides; and one to a trust meter that rises one notch.">
+        <defs>
+          <filter id="s1cSk" x="-3%" y="-3%" width="106%" height="106%"><feTurbulence type="fractalNoise" baseFrequency="0.02" numOctaves="2" seed="37" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="2.4" xChannelSelector="R" yChannelSelector="G"/></filter>
+          <pattern id="s1cHc" patternUnits="userSpaceOnUse" width="7" height="7" patternTransform="rotate(-38)"><line x1="0" y1="0" x2="0" y2="7" stroke="#047857" stroke-width="1" opacity=".5"/></pattern>
+          <marker id="s1cAr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M1 1 L9 5 L1 9" fill="none" stroke="#0F231B" stroke-width="1.6" stroke-linecap="round"/></marker>
+        </defs>
+        <style>
+          .s1cH { font: 800 12px Inter, sans-serif; fill: #0F231B; }
+          .s1cL { font: 600 12px Inter, sans-serif; fill: #0F231B; }
+          .s1cS { font: 400 11px Inter, sans-serif; fill: #46605A; }
+          .s1cB { font: 800 11px Inter, sans-serif; fill: #6A1F50; }
+          .s1cN { font: 400 12px Inter, sans-serif; fill: #46605A; }
+        </style>
+
+        <text class="s1cH" x="30" y="26">ONE QUESTION, TWO SENTENCES, THREE THINGS BACK</text>
+
+        <g filter="url(#s1cSk)" fill="none" stroke="#0F231B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <!-- the developer's bubble, two-part -->
+          <path d="M40 52 L420 52 L420 204 L120 204 L96 228 L100 204 L40 204 Z" fill="#FFFFFF"/>
+          <path d="M52 124 L408 124" stroke="#C3DDD3" stroke-dasharray="5 4"/>
+          <!-- arrows out -->
+          <path d="M426 86 L470 84" marker-end="url(#s1cAr)"/>
+          <path d="M426 170 C460 170 460 178 470 178" marker-end="url(#s1cAr)"/>
+          <path d="M426 200 C460 200 470 244 470 244" marker-end="url(#s1cAr)"/>
+          <!-- the fact that comes back -->
+          <rect x="480" y="50" width="370" height="68" rx="8" transform="rotate(-0.4 665 84)" fill="#ECFDF5"/>
+          <!-- the lesson that stays -->
+          <rect x="480" y="150" width="370" height="56" rx="8" transform="rotate(0.5 665 178)" fill="#FBE9F4" stroke="#8E2C6B"/>
+          <!-- trust meter -->
+          <rect x="480" y="236" width="200" height="16" rx="8" fill="#FFFFFF" stroke="#C3DDD3"/>
+          <rect x="480" y="236" width="60" height="16" rx="8" fill="url(#s1cHc)"/>
+          <rect x="540" y="236" width="40" height="16" rx="8" fill="#047857" stroke="#047857"/>
+        </g>
+
+        <text class="s1cB" x="52" y="74">THE QUESTION</text>
+        <text class="s1cL" x="52" y="93">"What is the worst thing that happens</text>
+        <text class="s1cL" x="52" y="110">if a reply is wrong?"</text>
+        <text class="s1cB" x="52" y="146">THE TEACH-BACK</text>
+        <text class="s1cS" x="52" y="164">"The worst case sets how much checking the assistant</text>
+        <text class="s1cS" x="52" y="179">needs. A wrong delivery time and a wrong drug are</text>
+        <text class="s1cS" x="52" y="194">not the same mistake."</text>
+
+        <text class="s1cL" x="494" y="72">A fact comes back</text>
+        <text class="s1cS" x="494" y="91">about one confirmation in twenty has a wrong price or a</text>
+        <text class="s1cS" x="494" y="106">substitute, and a missed one can be a wrong drug</text>
+        <text class="s1cB" x="494" y="172">A lesson stays with her</text>
+        <text class="s1cS" x="494" y="191">the assistant drafts; a person decides</text>
+        <text class="s1cS" x="690" y="248">trust, one notch up</text>
+
+        <text class="s1cN" x="30" y="288">The second sentence is why she answers the next question more fully, and the lesson she takes home.</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - the plum box is the part of the meeting that outlives it</figcaption>
+    </figure>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>Three teach-back lines an AI developer says in almost every meeting<span class="mini">2 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>A teach-back line has three properties. It is <strong>plain</strong>: no word she would have to ask about, so "checking" not "evaluation", "draft" not "generate". It is <strong>true</strong>: a real principle of the craft, not a pleasantry. And it is <strong>one sentence</strong>, or two short ones, because a paragraph is a lecture and she stops answering.</p>
+        <p>Three from the bank, word for word, that earn their place in almost any AI meeting:</p>
+        <ul>
+          <li>Before "show me one thread from yesterday, start to finish": <em>"The workflow as it happens today is the spec. I cannot automate a step I have not watched a person do."</em></li>
+          <li>Before "which replies need a person to decide, and which are just looking something up?": <em>"I split every workflow into lookups and decisions. Assistants do lookups, people keep decisions, and the line between them is yours to draw."</em></li>
+          <li>Before "what is the worst thing that happens if a reply is wrong?": <em>"The worst case sets how much checking the assistant needs. A wrong delivery time and a wrong drug are not the same mistake."</em></li>
+        </ul>
+        <p>Read them in order and they add up to one idea she can repeat to her board: the assistant drafts, a person decides. Session 4 builds twelve of these and picks the one concept per meeting worth ninety seconds.</p>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>Five kinds of question, and only one of them earns trust<span class="mini">2 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Session 3 sorts every question in the bank into five kinds, and the simulator scores them differently. <strong>Open</strong> questions about the past or present uncover facts and earn a point of trust. <strong>Closed</strong> yes-or-no questions are cheap and get you one fact at most. <strong>Vague</strong> questions ("what would you like AI to do for you?") cost minutes and get a generic back. <strong>Jargon</strong> costs twice: she has to ask what you mean, and she is a little less sure you understand her shop. <strong>Leading</strong> questions are the dangerous kind: "so the assistant should reply to the suppliers automatically?" gets a polite yes, and a belief that is wrong goes into your notes and later into your build.</p>
+        <p>The trust point is not decoration. Eight of the 24 facts on Adeline's sheet only come out once some trust exists, the one-in-twenty error rate among them, and the most sensitive one needs a great deal of it: the only IT person, who holds the login to the product list the assistant would need, is leaving in January, and she has not told the team.</p>
+      </div>
+    </details>
+
+    <div class="callout example">
+      <span class="ex-pill">Real world</span>
+      <p><strong>The same question, with and without its second sentence.</strong> Constructed, and familiar. Asked bare, "how often is a confirmation wrong?" sounds to an operations director like an audit of her managers, and the honest answer is the one she is least likely to give a stranger. Asked with "the error rate today is the bar any assistant has to beat, and how you catch errors is the part the assistant has to keep", it sounds like what it is: the developer protecting her managers' judgement, not questioning it.</p>
+    </div>
+
+    <div class="tryrow" data-fn="wordcount" data-multiline="1" data-title="Write one teach-back line" data-hint="Pick a question you asked a business person about an AI idea this month. Write the sentence you should have said before it: why you were asking, in words they already know. One sentence." data-seed="" data-cta="Count it"></div>
+  </section>
+
+  <section class="section" id="demo-1">
+    <div class="section-kicker">
+      <span class="klabel">Build-along</span>
+      <h2>Your door sheet for "can AI answer the WhatsApps"</h2>
+      <span class="tag demo">★ 22 min · everyone writes</span>
+    </div>
+    <p class="lede">One page, six rows. Use Adeline's request, or a real "can AI do X" from your own inbox, and build the sheet you will carry into the meeting. Every line is written before the meeting; the meeting is for listening. The row that gets the most ink is current way.</p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="A hand-drawn one-page sheet. At the top, the request in the operations director's own words: can AI answer the supplier WhatsApps. Below, six rows, one per door, each with two open questions and a teach-back line beside them. A plum tick in the margin marks the current-way row, the door an AI developer opens first and widest, and a pen lies beside the page.">
+        <defs>
+          <filter id="s1dSk" x="-3%" y="-3%" width="106%" height="106%"><feTurbulence type="fractalNoise" baseFrequency="0.02" numOctaves="2" seed="41" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="2.4" xChannelSelector="R" yChannelSelector="G"/></filter>
+          <pattern id="s1dHc" patternUnits="userSpaceOnUse" width="7" height="7" patternTransform="rotate(-38)"><line x1="0" y1="0" x2="0" y2="7" stroke="#047857" stroke-width="1" opacity=".5"/></pattern>
+          <marker id="s1dAr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M1 1 L9 5 L1 9" fill="none" stroke="#0F231B" stroke-width="1.6" stroke-linecap="round"/></marker>
+        </defs>
+        <style>
+          .s1dH { font: 800 12px Inter, sans-serif; fill: #0F231B; }
+          .s1dL { font: 600 12px Inter, sans-serif; fill: #0F231B; }
+          .s1dS { font: 400 11px Inter, sans-serif; fill: #46605A; }
+          .s1dB { font: 800 11px Inter, sans-serif; fill: #6A1F50; }
+          .s1dA { font: 700 11px Inter, sans-serif; fill: #047857; letter-spacing: .05em; }
+        </style>
+
+        <text class="s1dH" x="30" y="26">THE SHEET, ONE PAGE, WRITTEN BEFORE THE MEETING</text>
+
+        <g filter="url(#s1dSk)" fill="none" stroke="#0F231B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <!-- the page -->
+          <rect x="60" y="44" width="620" height="236" rx="4" transform="rotate(-0.4 370 162)" fill="#FFFFFF"/>
+          <!-- request box -->
+          <rect x="76" y="56" width="588" height="28" rx="4" fill="url(#s1dHc)"/>
+          <!-- the widest row, tinted -->
+          <rect x="78" y="170" width="584" height="22" rx="3" fill="#FBE9F4" stroke="#FBE9F4"/>
+          <!-- six rows -->
+          <path d="M76 116 L664 116 M76 142 L664 142 M76 168 L664 168 M76 194 L664 194 M76 220 L664 220 M76 246 L664 246 M76 272 L664 272" stroke="#C3DDD3"/>
+          <!-- column rules -->
+          <path d="M190 94 L190 272 M430 94 L430 272" stroke="#C3DDD3" stroke-dasharray="4 4"/>
+          <!-- the mark on the current-way row -->
+          <path d="M40 176 L52 188 L70 164" stroke="#8E2C6B" stroke-width="3"/>
+          <!-- the pen -->
+          <path d="M724 150 L812 76" stroke-width="5"/>
+          <path d="M724 150 L716 160 L728 156"/>
+        </g>
+
+        <text class="s1dS" x="86" y="75">in her words: "Can AI answer the supplier WhatsApps? My three area managers spend..."</text>
+        <text class="s1dA" x="84" y="108">DOOR</text>
+        <text class="s1dA" x="200" y="108">TWO OPEN QUESTIONS</text>
+        <text class="s1dA" x="440" y="108">TEACH-BACK, ONE LINE EACH</text>
+        <text class="s1dL" x="84" y="134">1 Outcome</text>
+        <text class="s1dS" x="200" y="134">if they went away, what changes?</text>
+        <text class="s1dS" x="440" y="134">a tool is checked by an outcome</text>
+        <text class="s1dL" x="84" y="160">2 Decision</text>
+        <text class="s1dS" x="200" y="160">which replies need a person?</text>
+        <text class="s1dS" x="440" y="160">it looks up; a person decides</text>
+        <text class="s1dB" x="84" y="186">3 Current way</text>
+        <text class="s1dB" x="200" y="186">show me yesterday's thread</text>
+        <text class="s1dB" x="440" y="186">the workflow today is the spec</text>
+        <text class="s1dL" x="84" y="212">4 Data state</text>
+        <text class="s1dS" x="200" y="212">where does the other half live?</text>
+        <text class="s1dS" x="440" y="212">the POS list is its dictionary</text>
+        <text class="s1dL" x="84" y="238">5 Constraints</text>
+        <text class="s1dS" x="200" y="238">which phone, which app, budget?</text>
+        <text class="s1dS" x="440" y="238">limits first, so I propose a yes</text>
+        <text class="s1dL" x="84" y="264">6 Success</text>
+        <text class="s1dS" x="200" y="264">how would you know? who trials?</text>
+        <text class="s1dS" x="440" y="264">agree the test now, not later</text>
+
+        <text class="s1dB" x="712" y="220">the mark: current way,</text>
+        <text class="s1dB" x="712" y="236">the door an AI developer</text>
+        <text class="s1dB" x="712" y="252">opens first and widest</text>
+
+      </svg>
+      <figcaption>🔍 Click to zoom - twelve questions and twelve second sentences fit on one page, and the plum row gets the most ink</figcaption>
+    </figure>
+
+    <div class="steps">
+      <div class="step">
+        <p><strong>Write the request as it was received, in her words.</strong> Not your translation. If it arrived as "can AI answer the WhatsApps", write that, not "LLM triage for supplier messaging". You will want this sentence back at the end of the meeting to see how far the real request was from it.</p>
+        <div class="prompt-box good"><span class="label">★ Step 1 · the request</span>Request, verbatim: "Can AI answer the supplier WhatsApps? My three area managers spend half their day on them and the board keeps asking what we are doing with AI."
+From: Adeline Tan, operations director
+Two outcomes already audible: managers in outlets, and the word AI on a slide</div>
+      </div>
+      <div class="step">
+        <p><strong>Two open questions per door, in the past or present tense.</strong> "Show me", "walk me through", "tell me about the last time". Nothing with "would you". Nothing that can be answered with yes. Write them so a person who has never written a prompt can answer every one. Spend the most care on door 3.</p>
+        <div class="prompt-box good"><span class="label">★ Step 2 · door 3, current way, two questions</span>Show me one thread from yesterday, start to finish. What did you do at each message?
+How often is a confirmation wrong, and how do you catch it?</div>
+        <div class="prompt-box bad"><span class="label">The same door, as it is usually opened</span>What is your tolerance for hallucination rate?
+So the assistant should reply to the suppliers automatically?</div>
+      </div>
+      <div class="step">
+        <p><strong>Attach a teach-back line to each question.</strong> Plain, true, one sentence or two short ones. Read each pair aloud once; if the second sentence has a word she would have to ask about, such as model, prompt or eval, change the word.</p>
+        <div class="prompt-box good"><span class="label">★ Step 3 · the pair</span>Q: In a thread, which replies need a person to decide, and which are just looking something up?
+Why I am asking: I split every workflow into lookups and decisions. Assistants do lookups, people keep decisions, and the line between them is yours to draw.</div>
+      </div>
+      <div class="step">
+        <p><strong>Mark the door your role opens first.</strong> For an AI developer it is door 3, current way: your output replaces or assists a step a person does today, so the workflow, its error rate, the lookup-decision split and who checks the output are the facts you cannot build safely without. Session 3 measures what that choice is worth, and is honest that on this sheet it is worth one point over the printed order.</p>
+        <div class="prompt-box good"><span class="label">★ Step 4 · the order for tonight</span>3 Current way (widest)  -&gt;  2 Decision  -&gt;  1 Outcome  -&gt;  4 Data state  -&gt;  5 Constraints  -&gt;  6 Success
+Budget: 45 minutes. Open questions cost three to five minutes each, so roughly ten fit. The sheet has twelve; the last two are spares.</div>
+      </div>
+      <div class="step">
+        <p><strong>Rehearse the opener against Adeline.</strong> Her first line is on the page. Say your first question out loud, with its teach-back. If it took more than twenty seconds, it is two questions; split it.</p>
+        <div class="prompt-box good"><span class="label">★ Step 5 · the first thirty seconds</span>Adeline: "Thanks for coming. Can AI answer the supplier WhatsApps? My three area managers spend half their day on them and the board keeps asking what we are doing with AI."
+You: "Before the AI, can I see one? Show me one thread from yesterday, start to finish, and tell me what you did at each message. I start there because the workflow as it happens today is the spec, and I cannot automate a step I have not watched a person do."</div>
+      </div>
+    </div>
+
+    <div class="callout tip">
+      <p><strong>Keep the sheet after the meeting.</strong> Session 2 walks the thread you asked to see end to end and maps where its data lives, session 5 turns her answers into three candidate projects, and session 6 turns the filled-in sheet into the one-page brief you send her within 24 hours. The same page carries all of it.</p>
+    </div>
+  </section>
+
+  <section class="section" id="exercise">
+    <div class="section-kicker">
+      <span class="klabel">Homework</span>
+      <h2>Before session 2</h2>
+      <span class="tag exercise">30 min</span>
+    </div>
+    <ol>
+      <li><strong>Finish the sheet</strong> for "can AI answer the WhatsApps" or your own request: twelve questions, twelve teach-back lines, one mark on current way. Bring it; session 3 puts it on the bench.</li>
+      <li><strong>Find the tune.</strong> For your request, write the one sentence you think the business person would say if you asked "if this went away, what would be different?" Then write the sentence you fear they would say. Both are guesses; the meeting replaces them.</li>
+      <li><strong>Tag a workflow you know.</strong> Take one process an assistant was proposed for, at work or anywhere, and write each step on its own line. Tag every step lookup or decision, and next to each decision write the name of the person who owns it today.</li>
+      <li><strong>Find the last attempt.</strong> Ask one colleague whether anything that "answers on its own" was ever tried where you work, and what happened. Write down what it taught them to distrust. Session 2 starts from the thread; that answer tells you how it will be read.</li>
+    </ol>
+  </section>
+
+  <section class="section" id="quiz">
+    <div class="section-kicker">
+      <span class="klabel">Check yourself</span>
+      <h2>Three questions</h2>
+    </div>
+    <p>Clear all three and session 1 gets stamped in your passport.</p>
+
+    <div class="quiz-q" data-answer="1">
+      <p class="qtext">1 · Adeline asks "can AI answer the supplier WhatsApps?" Why does an AI developer treat that as a question about a workflow rather than a model?</p>
+      <button class="qopt" type="button">A · Because models are too expensive for a pharmacy chain</button>
+      <button class="qopt" type="button">B · Because the word AI is her name for "get my managers back into the outlets", and whatever gets built replaces or assists a step a person does today, so the thread as it happens, watched end to end, is the spec you cannot build without</button>
+      <button class="qopt" type="button">C · Because she does not really want AI and is only saying it for the board</button>
+      <button class="qopt" type="button">D · Because workflows are easier to draw than models</button>
+      <p class="qwhy">Two tunes: she hears two outlet visits a day behind the word; the developer hears a model and a prompt. Neither notices. "Show me one thread from yesterday" is the question that makes her tune audible, and it is why door 3 opens widest.</p>
+    </div>
+
+    <div class="quiz-q" data-answer="3">
+      <p class="qtext">2 · In a supplier thread, what is the difference between a lookup and a decision, and why does it matter?</p>
+      <button class="qopt" type="button">A · Lookups are fast and decisions are slow, so the assistant should do the slow ones</button>
+      <button class="qopt" type="button">B · There is no real difference; a good enough model can do both</button>
+      <button class="qopt" type="button">C · Decisions are anything a manager types, lookups are anything a supplier types</button>
+      <button class="qopt" type="button">D · A lookup has a right answer that already exists somewhere, such as a price or a delivery time; a decision is a choice a person owns, such as accepting a substitute. Only the area manager may say yes to a substitute and pharmacy products need a record, so an assistant drafts the lookups and a person keeps the decisions</button>
+      <p class="qwhy">The line is hers to draw, which is why you ask "which replies need a person to decide?" instead of assuming. The leading version, "so the assistant should reply automatically?", records exactly the belief that produces a substitute drug nobody checked.</p>
+    </div>
+
+    <div class="quiz-q" data-answer="0">
+      <p class="qtext">3 · About one confirmation in twenty has a wrong price or a substitute, and the managers catch most of them. Why ask for that number before proposing anything?</p>
+      <button class="qopt" type="button">A · Because the error rate today, and the way it is caught, is the bar any assistant has to beat, and the catching is the part a person has to keep; without it you cannot say whether the assistant made things better or worse</button>
+      <button class="qopt" type="button">B · Because one in twenty is low enough that accuracy is not critical</button>
+      <button class="qopt" type="button">C · Because it proves the managers are careless and should be replaced</button>
+      <button class="qopt" type="button">D · Because a model needs exactly twenty examples to learn from</button>
+      <p class="qwhy">"Mistakes are rare, so accuracy is not critical?" is one of the five leading questions on the bench, and it records a false belief. One in twenty is rare and not cheap: a missed one is a wrong invoice at best and a wrong drug on a shelf at worst.</p>
+    </div>
+
+    <p class="quiz-score"></p>
+  </section>
+
+  <section class="section" id="official">
+    <div class="section-kicker">
+      <span class="klabel">Sources covered</span>
+      <h2>What this session teaches, and where it came from</h2>
+    </div>
+    <div class="covered">
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">Tappers and listeners, about 50 percent predicted, 3 of 120 named</span><span class="note">Elizabeth Newton, "The Rocky Road from Actions to Intentions", PhD dissertation, Stanford, 1990; figures as reported in Chip Heath and Dan Heath, Made to Stick, Random House, 2007, ch. 1. The dissertation itself was not read at source</span></div>
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">The curse of knowledge, the term</span><span class="note">Camerer, Loewenstein and Weber, "The Curse of Knowledge in Economic Settings", Journal of Political Economy 97(5), 1989</span></div>
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">Check the non-ML solution first; define success before building</span><span class="note">Google for Developers, "Introduction to Machine Learning Problem Framing", developers.google.com/machine-learning/problem-framing, accessed 2026-09-29; primary, read at source</span></div>
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">The Six Doors, named here in one line</span><span class="note">Stated in full, with the source of each move, in <a href="https://phoebefu6.github.io/learn-asking-right-questions-as-da-with-phoebe/courses/01-why-the-gap-and-the-six-doors.html">session 1 of the data analyst sibling</a>, the canonical corridor</span></div>
+      <div class="covered-row"><span class="status pill light">◐</span><span class="name">Bench figures quoted (11, 54, 55)</span><span class="note">Counted on the simulator in session 3 against a constructed fact sheet; they show the ordering and the mechanism, never a fact about a real business</span></div>
+      <div class="covered-row"><span class="status pill light">◐</span><span class="name">Harbourline, Adeline Tan and the supplier threads</span><span class="note">Constructed. Every fact on her sheet, including the one-in-twenty error rate and the switched-off chatbot, is printed in the bench's bank file and is invented to be typical, not sourced</span></div>
+    </div>
+    <p class="mono" style="margin-top:14px">Every fact on this page, and its verification tier, is recorded in the course's source map.</p>
+  </section>
+
+  <section class="cheat" id="cheatsheet">
+    <h3>Session 1 cheat sheet <span>· pin this</span></h3>
+    <div class="grid-2">
+      <div class="cheat-item"><b>Two tunes</b><span>She hears managers in outlets behind the word AI; you hear a model and a prompt. Neither can switch it off.</span></div>
+      <div class="cheat-item"><b>Six Doors</b><span>Outcome · Decision · Current way · Data state · Constraints · Success and partnership. In full at the DA session 1 corridor.</span></div>
+      <div class="cheat-item"><b>Current way, widest</b><span>"Show me one thread from yesterday, start to finish." The workflow today is the spec.</span></div>
+      <div class="cheat-item"><b>Lookups and decisions</b><span>The assistant drafts the lookups; a person keeps the decisions. She draws the line.</span></div>
+      <div class="cheat-item"><b>Today's error rate is the bar</b><span>About one in twenty, mostly caught. Beat it, and keep the catching with a person.</span></div>
+      <div class="cheat-item"><b>The teach-back line</b><span>Plain, true, one sentence, before the question. Trust up, and she learns one real thing.</span></div>
+    </div>
+  </section>
+
+  <div class="callout next">
+    <span class="nx-pill">Next session</span>
+    <p>You asked to see one thread. Session 2 watches it end to end: the supplier's confirmation, the outlet's original order typed into another group in English, Malay and Chinese with product nicknames, the manager's match, the OK. Then it asks where each half lives, what is recorded and what is not, and draws the data-state map for an assistant: what it could read, what it would need a dictionary for, and what it must never see.</p>
+  </div>
+
+  <footer class="pagefoot">
+    <span>Session 1 of 6 · learn-asking-right-questions-as-ai-with-phoebe · by Phoebe Fu &nbsp;·&nbsp; 📚 <a href="https://phoebefu6.github.io/learn-with-phoebe/">Learn with Phoebe ↗</a></span>
+    <span><a href="../index.html">← Course home</a> &nbsp;·&nbsp; <a href="02-the-thread-end-to-end-and-its-data.html">Next: The thread end to end, and its data →</a></span>
+  </footer>
+
+</main>
+
+<script src="../assets/app.js?v=1"></script>
+</body>
+</html>

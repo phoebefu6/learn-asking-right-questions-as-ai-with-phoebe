@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- social:start -->
+<meta name="description" content="Session 2 of 6. Watch one supplier thread end to end before you read any data, then find out what an assistant would have to read: which half was typed by a person, which was recorded by a system, which was never written down, where the dictionary lives, who holds the one login, and which box it must never see.">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Learn with Phoebe">
+<meta property="og:title" content="The thread end to end, and its data - learn asking the right questions as an AI developer with phoebe">
+<meta property="og:description" content="Session 2 of 6. Two chats and a match by eye, typed or recorded for an assistant, the dictionary, the names and the one key, and the thread map you send first.">
+<meta property="og:url" content="https://phoebefu6.github.io/learn-asking-right-questions-as-ai-with-phoebe/courses/02-the-thread-end-to-end-and-its-data.html">
+<meta property="og:image" content="https://phoebefu6.github.io/learn-asking-right-questions-as-ai-with-phoebe/assets/og-cover.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="The thread end to end, and its data - learn asking the right questions as an AI developer with phoebe">
+<meta name="twitter:description" content="Session 2 of 6. One thread watched end to end, what an assistant would have to read, and the thread map you send first.">
+<meta name="twitter:image" content="https://phoebefu6.github.io/learn-asking-right-questions-as-ai-with-phoebe/assets/og-cover.png">
+<!-- social:end -->
+<title>Session 2 · The thread end to end, and its data - learn asking the right questions as an AI developer with phoebe</title>
+<link rel="stylesheet" href="../assets/style.css?v=1">
+</head>
+<body>
+
+<div class="toolbar">
+  <div class="wrap">
+    <span class="crumb"><a href="../index.html">learn-asking-right-questions-as-ai-with-phoebe</a> / Session 2 of 6</span>
+    <button class="btn" id="toggle-all" type="button">Expand all</button>
+    <button class="btn primary" id="zoom-toggle" type="button">Projector zoom: off</button>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="wrap">
+    <div class="eyebrow">Learn Asking the Right Questions as an AI Developer with Phoebe · Session 2 of 6</div>
+    <h1>The thread end to end, and <span class="accent">its data</span></h1>
+    <p class="sub">Last session you asked to see one thread. Tonight you watch it, message by message, and then ask the question an AI developer usually skips: what would an assistant actually have to read to do the manager's job, and where does each piece of it live? Door 3, the current way, leads straight into door 4, the data state. The supplier's confirmation is on a manager's personal phone. The outlet's order is in a different group, in three languages, with nicknames no system knows. The product list that would act as the assistant's dictionary sits behind one login held by one person. And some threads carry a patient's name. Those facts decide the build before any model does. Tonight is how to find each of them in plain words, and the one-page map you send her before you build anything.</p>
+    <div class="chip-row">
+      <span class="chip level">🟡 Core</span>
+      <span class="chip audience">AI developers, and anyone asked to "add AI"</span>
+      <span class="chip audience">No code. A pen.</span>
+      <span class="chip time">45 min</span>
+    </div>
+    <div class="agenda">
+      <span class="a1" style="flex:1">0-3 · Welcome</span>
+      <span class="a2" style="flex:4">3-18 · The thread, its origins, the dictionary and the key</span>
+      <span class="a3" style="flex:5">18-40 · Build-along: the thread map</span>
+      <span class="a4" style="flex:1">40-45 · Q&amp;A</span>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <section class="section" id="intro">
+    <div class="section-kicker">
+      <span class="klabel">Part 0</span>
+      <h2>Where we start</h2>
+    </div>
+    <p class="lede">An AI developer handed "can AI answer the WhatsApps" tends to ask for the data first: the chat history, a sample of messages, something to prompt against. Adeline Tan, operations director of Harbourline, a constructed chain of 38 pharmacy and clinic outlets across Singapore and Malaysia, cannot give you any of that in a form you would recognise, and asking for it first gets you a polite "I will ask IT". What she can do is open her phone and show you yesterday. The thread comes before the data because the thread tells you which data matters: what the manager looked at, what she compared it with, what she decided, and where that decision went afterwards. Part 1 watches the thread. Part 2 asks where each piece was born. Part 3 finds the dictionary, the names and the one key. The build-along turns all of it into a map she can correct. The six doors are stated in full at <a href="https://phoebefu6.github.io/learn-asking-right-questions-as-da-with-phoebe/courses/01-why-the-gap-and-the-six-doors.html">the corridor</a>, and <a href="01-the-gap-from-the-ai-developers-chair.html">session 1</a> has the thread's first look.</p>
+
+    <div class="legend">
+      <span class="pill">🎫 Clear all three quiz questions to stamp your passport</span>
+      <span class="pill">Live = presented in the 45 minutes</span>
+      <span class="pill">Self-study = the full depth, after class</span>
+      <span class="pill">★ Build-along = write it yourself</span>
+    </div>
+
+    <div class="callout win">
+      <p><strong>★ What you walk out with tonight.</strong> A one-page thread map for a real "can AI do X" request: every kind of message in the workflow, where each one lives, whether it was typed, recorded or never written down, which step is a lookup and which a decision, and what an assistant would need to read to do the lookups, with the dictionary, the login holder by name and the one box it must never see marked on the page. Session 3 puts the same facts on the bench and prices them.</p>
+    </div>
+  </section>
+
+  <section class="section" id="part-1">
+    <div class="section-kicker">
+      <span class="klabel">Part 1 · covers the current way, watched before any data is read</span>
+      <h2>Watch one thread before you read any data</h2>
+      <span class="tag concept">5 min live</span>
+    </div>
+    <p class="lede">The thread looks like one conversation on the manager's phone. It is two. The supplier sends a confirmation with items and prices into one chat. The outlet's original order, the thing the confirmation has to match, was typed by the outlet manager into another WhatsApp group, in a mix of English, Malay and Chinese, using product nicknames. The area manager holds both in their head, matches them by eye, and replies OK or queries. About forty times a day. An assistant that reads only the supplier chat is reading half the job.</p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 366" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Two phones drawn side by side. The left phone shows the supplier thread: a confirmation in the supplier's own format with items and prices, fourteen suppliers in Singapore and twenty-two in Malaysia each writing differently; sometimes a substitute, about one in twenty wrong; and the manager's reply, OK or a query, about four in five ending in a plain OK. The right phone shows the outlet order group: the outlet's original order typed by the outlet manager in English, Malay and Chinese; product nicknames that are not in the POS product list; and no order table behind it. Between the phones a plum box marks the match by eye that happens in the manager's head: items against items, prices against memory, nickname against name. Arrows run from both phones into the match and from the match to the reply. Nothing links the two chats except the manager.">
+        <defs>
+          <filter id="s2aSk" x="-3%" y="-3%" width="106%" height="106%"><feTurbulence type="fractalNoise" baseFrequency="0.02" numOctaves="2" seed="52" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="2.4" xChannelSelector="R" yChannelSelector="G"/></filter>
+          <pattern id="s2aHc" patternUnits="userSpaceOnUse" width="7" height="7" patternTransform="rotate(-38)"><line x1="0" y1="0" x2="0" y2="7" stroke="#047857" stroke-width="1" opacity=".5"/></pattern>
+          <marker id="s2aAr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M1 1 L9 5 L1 9" fill="none" stroke="#0F231B" stroke-width="1.6" stroke-linecap="round"/></marker>
+        </defs>
+        <style>
+          .s2aH { font: 800 12px Inter, sans-serif; fill: #0F231B; }
+          .s2aL { font: 600 12px Inter, sans-serif; fill: #0F231B; }
+          .s2aS { font: 400 11px Inter, sans-serif; fill: #46605A; }
+          .s2aB { font: 800 11px Inter, sans-serif; fill: #6A1F50; }
+          .s2aA { font: 700 11px Inter, sans-serif; fill: #047857; letter-spacing: .05em; }
+          .s2aN { font: 400 12px Inter, sans-serif; fill: #46605A; }
+        </style>
+
+        <text class="s2aH" x="30" y="26">ONE THREAD NEEDS TWO CHATS, AND THE MATCH HAPPENS IN THE MANAGER'S HEAD</text>
+        <text class="s2aS" x="30" y="42">watched on one area manager's phone, yesterday's messages</text>
+
+        <g filter="url(#s2aSk)" fill="none" stroke="#0F231B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <!-- left phone: the supplier thread -->
+          <rect x="40" y="56" width="280" height="248" rx="18" transform="rotate(-0.4 180 180)" fill="#FFFFFF"/>
+          <rect x="52" y="68" width="256" height="24" rx="6" fill="#ECFDF5" stroke="#C3DDD3"/>
+          <rect x="56" y="104" width="230" height="64" rx="10" transform="rotate(-0.6 171 136)" fill="#FFFFFF"/>
+          <rect x="56" y="180" width="230" height="48" rx="10" transform="rotate(0.5 171 204)" fill="#FFFFFF"/>
+          <rect x="140" y="240" width="166" height="48" rx="10" transform="rotate(-0.5 223 264)" fill="#A7F3D0" stroke="#047857"/>
+          <!-- right phone: the outlet order group -->
+          <rect x="560" y="56" width="280" height="248" rx="18" transform="rotate(0.4 700 180)" fill="#FFFFFF"/>
+          <rect x="572" y="68" width="256" height="24" rx="6" fill="#ECFDF5" stroke="#C3DDD3"/>
+          <rect x="576" y="104" width="248" height="64" rx="10" transform="rotate(0.6 700 136)" fill="#FFFFFF"/>
+          <rect x="576" y="180" width="248" height="48" rx="10" transform="rotate(-0.5 700 204)" fill="#FFFFFF"/>
+          <rect x="576" y="240" width="248" height="48" rx="10" transform="rotate(0.4 700 264)" fill="#FFFFFF" stroke-dasharray="6 5"/>
+          <!-- the match, in her head -->
+          <rect x="350" y="132" width="180" height="86" rx="10" transform="rotate(-0.5 440 175)" fill="#FBE9F4" stroke="#8E2C6B"/>
+          <!-- connectors into the match and out to the reply -->
+          <path d="M290 136 C316 136 320 160 344 164" marker-end="url(#s2aAr)"/>
+          <path d="M572 136 C550 136 552 160 536 164" marker-end="url(#s2aAr)"/>
+          <path d="M572 204 C554 204 554 196 536 196" marker-end="url(#s2aAr)"/>
+          <path d="M430 222 C420 258 360 266 312 266" stroke="#8E2C6B" marker-end="url(#s2aAr)"/>
+        </g>
+
+        <text class="s2aA" x="64" y="85">SUPPLIER THREAD</text>
+        <text class="s2aL" x="68" y="124">Confirmation, its format</text>
+        <text class="s2aS" x="68" y="140">items and prices, in its words</text>
+        <text class="s2aS" x="68" y="155">14 SG + 22 MY suppliers</text>
+        <text class="s2aL" x="68" y="199">Sometimes a substitute</text>
+        <text class="s2aS" x="68" y="215">about 1 in 20 is wrong</text>
+        <text class="s2aL" x="152" y="259">Reply: OK or query</text>
+        <text class="s2aS" x="152" y="276">4 in 5 end in OK</text>
+
+        <text class="s2aA" x="584" y="85">OUTLET ORDER GROUP</text>
+        <text class="s2aL" x="588" y="124">Outlet's original order</text>
+        <text class="s2aS" x="588" y="140">typed by the outlet manager</text>
+        <text class="s2aS" x="588" y="155">English, Malay, Chinese</text>
+        <text class="s2aL" x="588" y="199">Product nicknames</text>
+        <text class="s2aS" x="588" y="215">not in the POS product list</text>
+        <text class="s2aL" x="588" y="259">No order table behind it</text>
+        <text class="s2aS" x="588" y="275">this chat is the order</text>
+
+        <text class="s2aS" x="440" y="122" text-anchor="middle">happens in the manager's head</text>
+        <text class="s2aB" x="364" y="154">THE MATCH, BY EYE</text>
+        <text class="s2aS" x="364" y="172">items against items,</text>
+        <text class="s2aS" x="364" y="187">prices against memory,</text>
+        <text class="s2aS" x="364" y="202">nickname against name</text>
+        <text class="s2aS" x="440" y="296" text-anchor="middle">nothing links the two chats</text>
+
+        <text class="s2aL" x="180" y="326" text-anchor="middle">Supplier chat, a personal phone</text>
+        <text class="s2aL" x="700" y="326" text-anchor="middle">Outlet chat, another group</text>
+
+        <text class="s2aN" x="30" y="350">The only link between the two chats is the manager, about forty times a day. An assistant inherits that step.</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - the plum box is the work: not replying to one message, but matching two that live in different places</figcaption>
+    </figure>
+
+    <details class="card" open>
+      <summary><span class="mode live">Live</span>One thread, message by message<span class="mini">3 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Open with the bank's question g01, teach-back first: "The workflow as it happens today is the spec. I cannot automate a step I have not watched a person do." Then: <strong>"Show me one thread from yesterday, start to finish. What did you do at each message?"</strong> Adeline calls Farid over and he scrolls. The supplier's confirmation arrives with items and prices in the supplier's own layout. He opens a second group, the one the outlet posts its orders in, and finds what the outlet asked for. He reads down both, item by item. He replies OK.</p>
+        <p>Stop him at the second group. That is the fact that reshapes the project, and it would never have come out of a request for "the chat history". The follow-up is g03, with its teach-back: "An assistant checks one message against another. If the other one lives somewhere else in another language, that is the real project." Then <strong>"Where is the outlet's original order, and what does it look like?"</strong> The answer: typed by the outlet manager, in a mix of English, Malay and Chinese, using product nicknames. There is no order table anywhere.</p>
+        <p>Write down what he did at each message, not what the message said. "Read the confirmation, opened the outlet group, matched by eye, replied" is a spec. "Supplier sent a confirmation" is a log line. The difference is the part a person does between messages, and that part is exactly what an assistant would be asked to take over.</p>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>Forty a day, thirty-six ways<span class="mini">2 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Two numbers turn one watched thread into a workload. The first is volume: about forty threads a day per manager, and about four in five end in a plain OK. The bank's question g19 asks for exactly that, with its teach-back: "The share of plain OKs is the share an assistant can safely draft. The rest is where the person stays." It gives you the size of the routine part and, just as usefully, the size of the part that is not routine.</p>
+        <p>The second is variety: fourteen suppliers in Singapore and twenty-two in Malaysia, each writing its confirmation differently. Thirty-six formats is not a detail for later. It means there is no single message shape to parse, which is the first thing a developer assumes and the first thing the thread disproves. Ask to see a second thread from a different supplier before you leave; the difference between the two is the variety, in one glance.</p>
+        <p>Neither number needs trust to come out; they are facts she knows and states freely. The error rate, about one confirmation in twenty with a wrong price or a substitute, needs a little, and the question that gets it is in <a href="01-the-gap-from-the-ai-developers-chair.html">session 1</a>. Watching the thread first is part of how that trust is earned: you have shown you care about how the work is done before you ask how often it goes wrong.</p>
+      </div>
+    </details>
+
+    <div class="callout example">
+      <span class="ex-pill">Real world</span>
+      <p><strong>The nickname only one outlet uses.</strong> A constructed case, but every multi-site business has its version. An outlet manager types an order using the name her team calls a product, not the name on the POS and not the name the supplier uses. The area manager reads it correctly, because they have visited that outlet and know what the team means. A developer who builds from the supplier chat alone sees a clean confirmation that matches nothing. A developer who watched the thread sees three names for one item, and understands that the knowledge doing the matching is in the manager's head, gathered on outlet visits. That is also why the managers are the scarce resource: the knowledge that makes them good at the thread is the knowledge they gather in the outlets they no longer have time to visit.</p>
+    </div>
+  </section>
+
+  <section class="section" id="part-2">
+    <div class="section-kicker">
+      <span class="klabel">Part 2 · covers where each piece was born, and how mature the habit is</span>
+      <h2>Recorded, typed, or not recorded, for an assistant</h2>
+      <span class="tag concept">5 min live</span>
+    </div>
+    <p class="lede">Once you have watched the thread, list what an assistant would have to read to do the manager's lookups, and ask where each thing was born. There are only three answers. Recorded by a system as a side effect of work. Typed by a person. Or not recorded anywhere. At Harbourline three of the four things an assistant needs were typed by a person on a phone, and the fourth, what was decided, was never written down at all. There is no order table anywhere, a chat can be exported only one at a time by hand, and the phones are the managers' own.</p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 428" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Four things an assistant would have to read, listed on the left, each traced by an arrow to where it was born on the right. The supplier's confirmation was typed by the supplier and arrives in a chat on a manager's personal phone, in thirty-six formats. The outlet's original order was typed by the outlet manager in another group, in English, Malay and Chinese with product nicknames. The product list was recorded by the POS, with codes that differ between Singapore and Malaysia and none of the nicknames. What was decided, drawn in plum, is not recorded anywhere: the thread is the record, and in March a manager left with her phone. A strip along the bottom says how an assistant could reach any of it today: no order table, chats exported one at a time by hand, personal phones with no business account and no API.">
+        <defs>
+          <filter id="s2bSk" x="-3%" y="-3%" width="106%" height="106%"><feTurbulence type="fractalNoise" baseFrequency="0.02" numOctaves="2" seed="63" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="2.4" xChannelSelector="R" yChannelSelector="G"/></filter>
+          <pattern id="s2bHc" patternUnits="userSpaceOnUse" width="7" height="7" patternTransform="rotate(-38)"><line x1="0" y1="0" x2="0" y2="7" stroke="#047857" stroke-width="1" opacity=".5"/></pattern>
+          <marker id="s2bAr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M1 1 L9 5 L1 9" fill="none" stroke="#0F231B" stroke-width="1.6" stroke-linecap="round"/></marker>
+        </defs>
+        <style>
+          .s2bH { font: 800 12px Inter, sans-serif; fill: #0F231B; }
+          .s2bL { font: 600 12px Inter, sans-serif; fill: #0F231B; }
+          .s2bS { font: 400 11px Inter, sans-serif; fill: #46605A; }
+          .s2bB { font: 800 11px Inter, sans-serif; fill: #6A1F50; }
+          .s2bA { font: 700 11px Inter, sans-serif; fill: #047857; letter-spacing: .05em; }
+          .s2bN { font: 400 12px Inter, sans-serif; fill: #46605A; }
+        </style>
+
+        <text class="s2bH" x="30" y="26">WHERE EACH THING THE ASSISTANT MUST READ WAS BORN</text>
+        <text class="s2bS" x="30" y="42">one question per item: "where does this live, step by step?"</text>
+
+        <g filter="url(#s2bSk)" fill="none" stroke="#0F231B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <!-- left: what the assistant must read -->
+          <rect x="40" y="60" width="250" height="56" rx="8" transform="rotate(-0.5 165 88)" fill="#FFFFFF"/>
+          <rect x="40" y="128" width="250" height="56" rx="8" transform="rotate(0.4 165 156)" fill="#FFFFFF"/>
+          <rect x="40" y="196" width="250" height="56" rx="8" transform="rotate(-0.4 165 224)" fill="#FFFFFF"/>
+          <rect x="40" y="264" width="250" height="56" rx="8" transform="rotate(0.5 165 292)" fill="#FBE9F4" stroke="#8E2C6B"/>
+          <!-- right: where it was born -->
+          <rect x="380" y="60" width="470" height="56" rx="8" transform="rotate(0.3 615 88)" fill="#FFFFFF"/>
+          <rect x="380" y="128" width="470" height="56" rx="8" transform="rotate(-0.3 615 156)" fill="#FFFFFF"/>
+          <rect x="380" y="196" width="470" height="56" rx="8" transform="rotate(0.3 615 224)" fill="#ECFDF5"/>
+          <rect x="380" y="264" width="470" height="56" rx="8" transform="rotate(-0.3 615 292)" fill="#FFFFFF" stroke="#8E2C6B" stroke-dasharray="6 5"/>
+          <!-- traces -->
+          <path d="M296 88 L372 88" marker-end="url(#s2bAr)"/>
+          <path d="M296 156 L372 156" marker-end="url(#s2bAr)"/>
+          <path d="M296 224 L372 224" marker-end="url(#s2bAr)"/>
+          <path d="M296 292 L372 292" stroke="#8E2C6B" stroke-dasharray="5 4" marker-end="url(#s2bAr)"/>
+          <!-- how an assistant could reach it -->
+          <rect x="40" y="340" width="810" height="48" rx="8" transform="rotate(-0.2 445 364)" fill="#ECFDF5" stroke="#C3DDD3"/>
+          <!-- a personal phone, the anchor -->
+          <rect x="818" y="348" width="16" height="30" rx="4" fill="#FFFFFF"/>
+          <path d="M823 372 L829 372" stroke-width="1.6"/>
+        </g>
+
+        <text class="s2bL" x="54" y="83">The supplier's confirmation</text>
+        <text class="s2bS" x="54" y="100">items, prices, substitutes</text>
+        <text class="s2bL" x="54" y="151">The outlet's original order</text>
+        <text class="s2bS" x="54" y="168">what the outlet asked for</text>
+        <text class="s2bL" x="54" y="219">The product list</text>
+        <text class="s2bS" x="54" y="236">to know which item is which</text>
+        <text class="s2bB" x="54" y="287">What was decided</text>
+        <text class="s2bS" x="54" y="304">who said yes to a substitute</text>
+
+        <text class="s2bL" x="394" y="83">TYPED, by the supplier</text>
+        <text class="s2bS" x="394" y="100">in a chat on a manager's personal phone; 36 formats</text>
+        <text class="s2bL" x="394" y="151">TYPED, by the outlet manager</text>
+        <text class="s2bS" x="394" y="168">in another group; English, Malay and Chinese; product nicknames</text>
+        <text class="s2bL" x="394" y="219">RECORDED, by the POS</text>
+        <text class="s2bS" x="394" y="236">codes differ between SG and MY; the nicknames are not in it</text>
+        <text class="s2bB" x="394" y="287">NOT RECORDED anywhere</text>
+        <text class="s2bS" x="394" y="304">the thread is the record; in March one left with her phone</text>
+
+        <text class="s2bL" x="56" y="360">How an assistant could reach any of it today</text>
+        <text class="s2bS" x="56" y="377">no order table; chats export one at a time, by hand; personal phones, no business account, no API</text>
+
+        <text class="s2bN" x="30" y="414">Three of the four were typed on a phone; the one a pharmacy most needs kept was never written down.</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - the plum row is the gap an assistant cannot read around: a decision nobody recorded</figcaption>
+    </figure>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>Where the messages live, and where the decision goes<span class="mini">3 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Two questions from the bank find the whole left side of that figure. The first is g11, teach-back first: "Where the messages live decides whether an assistant can even read them. That is a setup question, not a model question." Then: <strong>"Are the WhatsApp numbers personal phones or a business account? Can a chat be exported?"</strong> Adeline's answer is short and decisive. The numbers are the managers' personal phones. There is no business account and no API. A chat can be exported, one chat at a time, by hand.</p>
+        <p>Say what that means out loud, because it is the moment the project changes shape. An assistant cannot sit behind a personal WhatsApp number and read along. Anything it reads, somebody has to hand it, one chat at a time. That is not a problem a better model solves. It is a setup fact, and it belongs on the data-state map before any design is drawn.</p>
+        <p>The second is g04, with its teach-back: "If the record is a phone, the first thing an assistant should produce is a log, before it produces a single answer." Then <strong>"What happens to a thread once it is done? Where does the decision live?"</strong> This one needs a little trust, and it is why you ask it after the thread, not before. Nobody keeps a record of what was decided. The WhatsApp thread is the record. An area manager left in March and her phone went with her. For a pharmacy, where substitutions need a record by law, that is the most important box on the page, and it is empty.</p>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>Five rungs, asked about the thread<span class="mini">2 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Where a thing was born tells you what it is. How mature the habit around it is tells you how far you can lean on it. DAMA-DMBOK, 2nd edition, chapter 15, names five levels of data management maturity: <strong>Initial/Ad hoc, Repeatable, Defined, Managed, Optimized</strong>. Five, with no level 0. The names are borrowed, as reported from summaries; the plain questions are ours, and they are what Adeline hears. The ladder is taught in depth in <a href="https://phoebefu6.github.io/learn-asking-right-questions-as-da-with-phoebe/courses/02-reading-their-data-state.html">session 2 of the data analyst sibling</a>; for an AI developer it is five questions about the thread.</p>
+        <p>"When a confirmation is wrong, who catches it, and how do they know?" The manager, by eye, because she knows the outlet. "Does each manager do it the same way?" You do not know yet, and neither does the fact sheet; ask, and write down the answer she gives rather than the one you expect. "Is any of it written down?" No: the method is in three heads and the record is on three phones. "Does anyone check afterwards whether the OK was right?" Nothing she has said so far suggests anyone does. "Has it got better on its own?" Ask. On what she has told you, the matching habit reads as the bottom rung, with the second and fourth questions still open. That reading goes in your notes, never into the meeting as a grade.</p>
+        <p>The rung matters more for an assistant than for a report. A report built on an ad hoc habit is a report nobody trusts. An assistant built on one inherits the habit's variety as its training data and its test cases, with no written method to check its drafts against. The real maturity assessment is a governance discipline, taught in <a href="https://phoebefu6.github.io/learn-governance-101-with-phoebe/">Governance 101</a>; in a discovery meeting it is five questions and a note.</p>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>Why preparation eats the project, quoted as it stands<span class="mini">2 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Two figures are usually run together into one, and they should not be. In 2014 Steve Lohr reported in <em>The New York Times</em> that data scientists spend 50 percent to 80 percent of their time collecting and preparing data. In 2016 CrowdFlower's data science survey reported 60 percent of time spent cleaning and organising data and a further 19 percent collecting it. Different methods, different shapes of answer: a range for two activities together, and two separate figures. Quote whichever you use as it stands.</p>
+        <p>For an assistant at Harbourline, preparation has a concrete shape, and every piece of it is visible in the figure above. Somebody exports chats by hand from three personal phones. Somebody builds a dictionary from outlet nicknames to POS codes, twice, because the codes differ between the two countries. Somebody decides what to do about the decisions that were never recorded. None of that is model work, all of it comes before model work, and every piece was found by asking where a thing was born rather than asking for "the data".</p>
+      </div>
+    </details>
+
+    <div class="callout example">
+      <span class="ex-pill">Real world</span>
+      <p><strong>The history that was not a dataset.</strong> Constructed, and a request every AI developer has made. The developer asks for six months of thread history to test a prototype against. It sounds like one export. At Harbourline it is each area manager opening each supplier chat on their own phone and exporting it by hand, one chat at a time, then doing the same for the outlet groups, because the confirmations are useless without the orders they answer. The threads of the manager who left in March are not there at all: they went with her phone. And somewhere in those exports is a patient's name, which Part 3 is about. "Can I have the history?" was the wrong first question. "Where does it live, and who would have to export it?" finds all of that in two minutes.</p>
+    </div>
+  </section>
+
+  <section class="section" id="part-3">
+    <div class="section-kicker">
+      <span class="klabel">Part 3 · covers the dictionary, the names in the threads, and the one key</span>
+      <h2>The dictionary, the names, and the one key</h2>
+      <span class="tag concept">5 min live</span>
+    </div>
+    <p class="lede">An assistant that drafts the lookups has to know which item is which, so it needs a dictionary: the POS product list, whose codes differ between the two countries and which holds none of the outlet nicknames. The dictionary sits behind one login, held by Kenneth, the only IT person, who is leaving in January. And some threads carry a patient's name, which turns a supplier tool into a personal-data tool. Three facts, three different people who have to say yes, and none of them about a model.</p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 342" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="The data-state map for an assistant. Three boxes across the top. The first, what it can read once exported: supplier confirmations, one chat at a time, by hand, from each manager's own phone, in thirty-six formats. The second, what it needs a dictionary for: outlet orders in nicknames and three languages, with the POS product list as the dictionary, codes that differ between Singapore and Malaysia and no nicknames in it. The third, in plum, what it must never see: patient names, which sometimes appear when an outlet orders for a named person, personal data under Malaysia's PDPA. Below, three boxes: what was decided, not recorded, so the first output is a log; the POS product list with a key drawn on it, admin login Kenneth only, leaving in January with the team not told, and an arrow up to the dictionary; and who has to approve, because a name makes it personal data and the head office lawyer takes four weeks, with an arrow down from the plum box.">
+        <defs>
+          <filter id="s2cSk" x="-3%" y="-3%" width="106%" height="106%"><feTurbulence type="fractalNoise" baseFrequency="0.02" numOctaves="2" seed="74" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="2.4" xChannelSelector="R" yChannelSelector="G"/></filter>
+          <pattern id="s2cHc" patternUnits="userSpaceOnUse" width="7" height="7" patternTransform="rotate(-38)"><line x1="0" y1="0" x2="0" y2="7" stroke="#047857" stroke-width="1" opacity=".5"/></pattern>
+          <marker id="s2cAr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M1 1 L9 5 L1 9" fill="none" stroke="#0F231B" stroke-width="1.6" stroke-linecap="round"/></marker>
+        </defs>
+        <style>
+          .s2cH { font: 800 12px Inter, sans-serif; fill: #0F231B; }
+          .s2cL { font: 600 12px Inter, sans-serif; fill: #0F231B; }
+          .s2cS { font: 400 11px Inter, sans-serif; fill: #46605A; }
+          .s2cB { font: 800 11px Inter, sans-serif; fill: #6A1F50; }
+          .s2cA { font: 700 11px Inter, sans-serif; fill: #047857; letter-spacing: .05em; }
+          .s2cN { font: 400 12px Inter, sans-serif; fill: #46605A; }
+        </style>
+
+        <text class="s2cH" x="30" y="26">THE DATA-STATE MAP FOR AN ASSISTANT, AS SHE CAN READ IT</text>
+        <text class="s2cS" x="30" y="42">what it could read, what it needs a dictionary for, what it must never see</text>
+
+        <g filter="url(#s2cSk)" fill="none" stroke="#0F231B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <!-- top row: three zones -->
+          <rect x="40" y="60" width="250" height="120" rx="8" transform="rotate(-0.5 165 120)" fill="#FFFFFF"/>
+          <rect x="320" y="60" width="250" height="120" rx="8" transform="rotate(0.4 445 120)" fill="#ECFDF5"/>
+          <rect x="600" y="60" width="250" height="120" rx="8" transform="rotate(-0.4 725 120)" fill="#FBE9F4" stroke="#8E2C6B"/>
+          <!-- bottom row -->
+          <rect x="40" y="226" width="250" height="74" rx="8" transform="rotate(0.5 165 263)" fill="#FFFFFF" stroke-dasharray="6 5"/>
+          <rect x="320" y="226" width="250" height="74" rx="8" transform="rotate(-0.4 445 263)" fill="#FFFFFF"/>
+          <rect x="600" y="226" width="250" height="74" rx="8" transform="rotate(0.4 725 263)" fill="#FFFFFF"/>
+          <!-- the one key, on the POS box -->
+          <circle cx="546" cy="244" r="6" fill="#ECFDF5"/>
+          <path d="M551 248 L562 259 M558 255 L555 258 M561 258 L558 261" stroke-width="2.2"/>
+          <!-- the dictionary feeds the middle zone; the name sends approval downward -->
+          <path d="M445 222 L445 188" marker-end="url(#s2cAr)"/>
+          <path d="M725 186 L725 220" stroke="#8E2C6B" marker-end="url(#s2cAr)"/>
+        </g>
+
+        <text class="s2cA" x="54" y="80">CAN READ, ONCE EXPORTED</text>
+        <text class="s2cL" x="54" y="102">Supplier confirmations</text>
+        <text class="s2cS" x="54" y="118">one chat at a time, by hand,</text>
+        <text class="s2cS" x="54" y="133">from each manager's own phone</text>
+        <text class="s2cS" x="54" y="148">36 formats, no shared layout</text>
+
+        <text class="s2cA" x="334" y="80">NEEDS A DICTIONARY</text>
+        <text class="s2cL" x="334" y="102">Outlet orders</text>
+        <text class="s2cS" x="334" y="118">nicknames, three languages</text>
+        <text class="s2cS" x="334" y="133">dictionary: the POS product list</text>
+        <text class="s2cS" x="334" y="148">codes differ SG vs MY</text>
+        <text class="s2cS" x="334" y="163">the nicknames are not in it</text>
+
+        <text class="s2cB" x="614" y="80">MUST NEVER SEE</text>
+        <text class="s2cL" x="614" y="102">Patient names</text>
+        <text class="s2cS" x="614" y="118">sometimes in a thread, when an</text>
+        <text class="s2cS" x="614" y="133">outlet orders for a named person</text>
+        <text class="s2cS" x="614" y="148">Malaysia's PDPA: personal data</text>
+
+        <text class="s2cL" x="54" y="248">What was decided</text>
+        <text class="s2cS" x="54" y="265">not recorded; the thread is it</text>
+        <text class="s2cS" x="54" y="280">first output: a log, not an answer</text>
+
+        <text class="s2cL" x="334" y="248">POS product list</text>
+        <text class="s2cS" x="334" y="265">admin login: Kenneth, only him</text>
+        <text class="s2cB" x="334" y="280">leaving January; team not told</text>
+
+        <text class="s2cL" x="614" y="248">Who has to approve</text>
+        <text class="s2cS" x="614" y="265">a name makes it personal data</text>
+        <text class="s2cS" x="614" y="280">head office lawyer: four weeks</text>
+
+        <text class="s2cN" x="30" y="326">Each box says who can say yes. The plum box changes who has to approve the whole tool.</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - the plum box is the one an assistant must never be shown, and it quietly moves the approval to a lawyer</figcaption>
+    </figure>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>The product list is its dictionary<span class="mini">2 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Every lookup the assistant drafts is a match: this line on the confirmation is that line on the outlet's order. To match, it has to know that two different names are one product. The bank's question g09 asks for the thing that would let it: <strong>"Which system holds the product list, and do the suppliers use your codes?"</strong> Teach-back first: "An assistant can only match what it can look up. The product list is its dictionary."</p>
+        <p>Adeline's answer has two halves, and both land on the map. The POS holds the product list, so there is a dictionary. But the codes differ between the two countries, and the nicknames the outlets use are not in it. The dictionary is real and incomplete in exactly the place the matching happens. Filling that gap, nickname to product, outlet by outlet, is work a person has to do with the managers, and it is worth more to any assistant than a better prompt.</p>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>The login, asked by name<span class="mini">2 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Question g10 has to be asked with a name in the answer: <strong>"Who can log in to the POS back office and pull the product list?"</strong> Teach-back: "Access is the first blocker on most projects, so I ask early and I ask by name." "IT can" is not an answer. "Kenneth can" is.</p>
+        <p>The rest of the answer does not come out on the first asking. Kenneth is the only IT person, he holds the POS admin login, he is leaving in January, and she has not told the team. On the bench that fact sits behind the highest trust gate on her sheet: she volunteers it only after several open questions with their reasons said aloud have shown her you are trying to help. It is worth 3 points, and it is the difference between an assistant with a dictionary and an assistant whose dictionary nobody can update after January. That is also why this question comes after the thread and not before it: asked cold, it gets "our IT guy".</p>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>A name in the thread changes who approves<span class="mini">2 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Question g12 is short and easy to skip, and skipping it is how a supplier tool becomes a legal problem: <strong>"Do customer names ever appear in these threads?"</strong> Teach-back: "A name in a message turns a supplier tool into a personal-data tool, and that changes who has to approve it."</p>
+        <p>They do, sometimes, when an outlet orders a special item for a named customer. She mentions it once she trusts you a little. A patient name in a message makes it personal data under Malaysia's Personal Data Protection Act, and the head office lawyer takes four weeks to answer anything. So the box goes on the map in plum, labelled "must never see", and the approver changes from Adeline alone to Adeline and the lawyer. What the law requires in detail is not something to improvise in a discovery meeting; what you need is the fact that names appear, and the name of the person who will have to say yes.</p>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>What the map is for<span class="mini">2 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>The map above is the first thing you send Adeline after the meeting, before any prototype, before any proposal. Six boxes, a name or "nobody" wherever someone has to say yes, one key, one plum box. No word on it she would have to ask about. She can look at it on her phone and say "two of the outlets post their orders in a different group", or "Kenneth has a deputy who can log in too", and either correction is worth more than a week of building.</p>
+        <p>It is also your own honesty check before you design anything. A box that says "not recorded" means the project has a logging task before it has an assistant. A key on one person who is leaving means a continuity task before a dictionary. A plum box means an approval task before a pilot. An assistant proposed on top of a map with all three unaddressed is a demo, and session 5 is where those three tasks become candidate projects in their own right.</p>
+      </div>
+    </details>
+
+    <div class="callout example">
+      <span class="ex-pill">Real world</span>
+      <p><strong>The export that carried a name.</strong> Constructed, and one way a small AI pilot turns into a large one. A developer who never asked g12 exports a few supplier threads to try a drafting prompt against. One of them is a special order, and the outlet's message has the customer's name in it, typed so the right bottle goes to the right person. The prompt works. The pilot is now a tool that has read personal data, on a laptop nobody approved, and the next conversation is with a lawyer who takes four weeks. Asked in the meeting, the same question costs three minutes and puts one plum box on the map.</p>
+    </div>
+
+    <div class="tryrow" data-fn="wordcount" data-multiline="1" data-title="Write the dictionary question for your own request" data-hint="For an assistant you have been asked to build, name the list it would have to look things up in, and write the question that gets you the name of the person who can open it. Say the plain reason first. Two sentences." data-seed="" data-cta="Count it"></div>
+  </section>
+
+  <section class="section" id="demo-1">
+    <div class="section-kicker">
+      <span class="klabel">Build-along</span>
+      <h2>Map the thread, then ask which box is wrong</h2>
+      <span class="tag demo">★ 22 min · everyone writes</span>
+    </div>
+    <p class="lede">One page, written by hand from what you watched and what she told you. Use Adeline's supplier thread, or a workflow from your own "can AI do X" request, and build the thread map you will send within a day of the meeting. One row per kind of message, not per message. Every cell is something she can correct, and none of it is a schema.</p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 330" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="A hand-drawn thread map on a page: a table with five columns, message, where it lives, origin, step, and what the assistant needs. Three rows are filled in. The supplier confirmation lives in the supplier chat, typed, a lookup, and the assistant needs the outlet order. The outlet order lives in the outlet group, typed, a lookup, and the assistant needs the dictionary. The substitute row is drawn in plum: supplier chat, typed, a decision, and it needs a person, by name. The remaining rows are blank. In the margin to the right, six numbered questions guide the filling, ending with which box is wrong, the line you send it with. A small phone sits in the corner.">
+        <defs>
+          <filter id="s2dSk" x="-3%" y="-3%" width="106%" height="106%"><feTurbulence type="fractalNoise" baseFrequency="0.02" numOctaves="2" seed="85" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="2.4" xChannelSelector="R" yChannelSelector="G"/></filter>
+          <pattern id="s2dHc" patternUnits="userSpaceOnUse" width="7" height="7" patternTransform="rotate(-38)"><line x1="0" y1="0" x2="0" y2="7" stroke="#047857" stroke-width="1" opacity=".5"/></pattern>
+          <marker id="s2dAr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M1 1 L9 5 L1 9" fill="none" stroke="#0F231B" stroke-width="1.6" stroke-linecap="round"/></marker>
+        </defs>
+        <style>
+          .s2dH { font: 800 12px Inter, sans-serif; fill: #0F231B; }
+          .s2dL { font: 600 12px Inter, sans-serif; fill: #0F231B; }
+          .s2dS { font: 400 11px Inter, sans-serif; fill: #46605A; }
+          .s2dB { font: 800 11px Inter, sans-serif; fill: #6A1F50; }
+          .s2dA { font: 700 11px Inter, sans-serif; fill: #047857; letter-spacing: .05em; }
+          .s2dN { font: 400 12px Inter, sans-serif; fill: #46605A; }
+        </style>
+
+        <text class="s2dH" x="30" y="26">THE THREAD MAP: ONE ROW PER KIND OF MESSAGE, SIX QUESTIONS IN THE MARGIN</text>
+
+        <g filter="url(#s2dSk)" fill="none" stroke="#0F231B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <!-- the page -->
+          <rect x="40" y="46" width="572" height="246" rx="4" transform="rotate(-0.4 326 169)" fill="#FFFFFF"/>
+          <!-- header band -->
+          <rect x="48" y="56" width="556" height="24" rx="3" fill="#ECFDF5" stroke="#C3DDD3"/>
+          <!-- the decision row, tinted -->
+          <rect x="48" y="146" width="556" height="28" rx="3" fill="#FBE9F4" stroke="#8E2C6B"/>
+          <!-- row rules -->
+          <path d="M48 112 L604 112 M48 144 L604 144 M48 176 L604 176 M48 208 L604 208 M48 240 L604 240 M48 272 L604 272" stroke="#C3DDD3"/>
+          <!-- column rules -->
+          <path d="M172 80 L172 272 M302 80 L302 272 M386 80 L386 272 M462 80 L462 272" stroke="#C3DDD3" stroke-dasharray="4 4"/>
+          <!-- margin rule -->
+          <path d="M628 46 L628 292" stroke="#C3DDD3"/>
+          <!-- a phone, the anchor -->
+          <rect x="820" y="256" width="16" height="28" rx="4" fill="#FFFFFF"/>
+          <path d="M825 278 L831 278" stroke-width="1.6"/>
+        </g>
+
+        <text class="s2dA" x="56" y="72">MESSAGE</text>
+        <text class="s2dA" x="178" y="72">WHERE IT LIVES</text>
+        <text class="s2dA" x="308" y="72">ORIGIN</text>
+        <text class="s2dA" x="392" y="72">STEP</text>
+        <text class="s2dA" x="468" y="72">ASSISTANT NEEDS</text>
+
+        <text class="s2dL" x="56" y="100">Confirmation</text>
+        <text class="s2dS" x="178" y="100">supplier chat</text>
+        <text class="s2dS" x="308" y="100">typed</text>
+        <text class="s2dS" x="392" y="100">lookup</text>
+        <text class="s2dS" x="468" y="100">the outlet order</text>
+
+        <text class="s2dL" x="56" y="132">Outlet order</text>
+        <text class="s2dS" x="178" y="132">outlet group</text>
+        <text class="s2dS" x="308" y="132">typed</text>
+        <text class="s2dS" x="392" y="132">lookup</text>
+        <text class="s2dS" x="468" y="132">the dictionary</text>
+
+        <text class="s2dB" x="56" y="164">Substitute</text>
+        <text class="s2dB" x="178" y="164">supplier chat</text>
+        <text class="s2dB" x="308" y="164">typed</text>
+        <text class="s2dB" x="392" y="164">DECISION</text>
+        <text class="s2dB" x="468" y="164">a person, by name</text>
+
+        <text class="s2dS" x="56" y="196">your next row</text>
+
+        <text class="s2dA" x="640" y="66">IN THE MARGIN</text>
+        <text class="s2dL" x="640" y="92">1 Every kind of message?</text>
+        <text class="s2dL" x="640" y="120">2 Where does it live?</text>
+        <text class="s2dL" x="640" y="148">3 Typed, recorded, absent?</text>
+        <text class="s2dL" x="640" y="176">4 Lookup or decision?</text>
+        <text class="s2dL" x="640" y="204">5 What must it read?</text>
+        <text class="s2dB" x="640" y="232">6 "Which box is wrong?"</text>
+        <text class="s2dS" x="640" y="250">the line you send it with</text>
+
+        <text class="s2dN" x="30" y="316">One row per kind of message, not per message. Forty threads a day share a handful of kinds.</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - three rows are filled to show the depth; the plum row is the one that keeps a person, and the map says who</figcaption>
+    </figure>
+
+    <div class="steps">
+      <div class="step">
+        <p><strong>List every kind of message in one thread, in the order it arrives.</strong> From the thread you watched, not from what a thread ought to contain. Include the message that lives somewhere else; it is the one most maps leave out.</p>
+        <div class="prompt-box good"><span class="label">★ Step 1 · the kinds of message, in order</span>1. Supplier confirmation: items and prices, in the supplier's own format
+2. The outlet's original order: in another WhatsApp group, typed earlier
+3. Sometimes: a substitute offered, or a price change
+4. The manager's reply: OK, or a query
+5. Delivery time: just needs to reach the outlet</div>
+      </div>
+      <div class="step">
+        <p><strong>Where each one lives, and how it was born.</strong> Typed by a person, recorded by a system, or not recorded anywhere. Beside each, write the question that found it, so you can repeat it next time. Say the teach-back first every time.</p>
+        <div class="prompt-box good"><span class="label">★ Step 2 · where it lives, with the question that found it</span>Confirmation   TYPED     supplier chat, manager's personal phone
+               found by: "show me one thread from yesterday"
+Outlet order   TYPED     outlet group; English, Malay, Chinese; nicknames
+               found by: "where is the outlet's original order?"
+Product list   RECORDED  the POS; codes differ SG vs MY; no nicknames
+               found by: "which system holds the product list?"
+Decision made  ABSENT    the thread is the record; one phone left in March
+               found by: "where does the decision live?"</div>
+      </div>
+      <div class="step">
+        <p><strong>Tag each step lookup or decision, and name the owner of each decision.</strong> A lookup has a right answer that already exists somewhere. A decision is a choice a person owns. Write the name of the person who may say yes, never a role in general.</p>
+        <div class="prompt-box good"><span class="label">★ Step 3 · lookups, decisions, owners</span>Match confirmation to order   LOOKUP    done by eye today
+Check the price               LOOKUP    against what? there is no order table
+Accept a substitute or price  DECISION  area manager only; needs a record
+Pass on the delivery time     LOOKUP    nobody decides anything about it
+Reply OK                      LOOKUP    about four in five threads end here</div>
+      </div>
+      <div class="step">
+        <p><strong>What the assistant would need to read, and who opens each door to it.</strong> For every lookup, write what it would have to look in, and the name of the person who can give it that. Then add the one box it must never see.</p>
+        <div class="prompt-box good"><span class="label">★ Step 4 · what it reads, and who says yes</span>Supplier chats   exported one at a time, by hand, by each manager
+                 no business account, no API
+Outlet orders    the same, from the outlet groups
+                 needs the dictionary to match
+Dictionary       POS product list
+                 login: Kenneth only; leaving January, team not told
+Nickname list    does not exist yet
+                 made together with the managers, outlet by outlet
+NEVER SEE        patient names in special orders
+                 personal data under Malaysia's PDPA; lawyer, four weeks</div>
+      </div>
+      <div class="step">
+        <p><strong>Draw the map.</strong> Boxes for what it could read, what it needs a dictionary for, and what it must never see; a box for the decision record, dashed if it does not exist; the key on the one login. A monospace sketch in a message is fine; a photo of a hand drawing is better, because it looks like something she is allowed to correct.</p>
+        <div class="prompt-box good"><span class="label">★ Step 5 · the map, as it goes in the message</span>+----------------------+   +----------------------+   +----------------------+
+| CAN READ, exported   |   | NEEDS A DICTIONARY   |   | MUST NEVER SEE       |
+| supplier chats       |   | outlet orders        |   | patient names        |
+| by hand, per phone   |   | nicknames, 3 langs   |   | PDPA, lawyer 4 weeks |
++----------------------+   +----------+-----------+   +----------------------+
+                                      ^
+                                      |
+:......................:   +----------+-----------+
+: DECISIONS: not kept  :   | POS product list     |
+: first output: a log  :   | [key] Kenneth only   |
+:......................:   | leaving January      |
+                           +----------------------+</div>
+      </div>
+      <div class="step">
+        <p><strong>Write the one line you send with it.</strong> Not a summary, not a proposal, not a prototype. One sentence that says what the map is and asks her to correct it. Send it within a day, while she still remembers what she told you.</p>
+        <div class="prompt-box good"><span class="label">★ Step 6 · the covering line</span>Hi Adeline, here is what I understood about one supplier thread
+and where each piece of it lives. Which box is wrong?</div>
+        <div class="prompt-box bad"><span class="label">The same message, as it is usually sent</span>Hi Adeline, attached is a proposed architecture for an LLM-based
+WhatsApp agent with retrieval over thread history and a guardrail
+layer. Could IT share an export of the chats so we can start testing?</div>
+      </div>
+    </div>
+
+    <div class="callout tip">
+      <p><strong>Send the map, not a prototype, first.</strong> A prototype says "I have started building"; a map says "I have started listening". She can correct the map on her phone in a minute, and every correction is a build week you do not lose. Session 5 turns the dashed box and the missing nickname list into candidate projects of their own, beside the assistant that only drafts; session 6 folds the corrected map into the one-page brief.</p>
+    </div>
+  </section>
+
+  <section class="section" id="exercise">
+    <div class="section-kicker">
+      <span class="klabel">Homework</span>
+      <h2>Before session 3</h2>
+      <span class="tag exercise">30 min</span>
+    </div>
+    <ol>
+      <li><strong>Watch one real thread.</strong> For a workflow someone wants an assistant for, sit with the person who does it and watch one instance end to end. Write what they did at each step, not what each message said. Mark the moment they opened something else.</li>
+      <li><strong>Map it.</strong> One row per kind of message: where it lives, typed or recorded or absent, lookup or decision, and what an assistant would have to read. Put a name or "nobody" wherever someone has to say yes.</li>
+      <li><strong>Find the dictionary and its key.</strong> Name the list the assistant would look things up in, what is missing from it, and the one person who can log in to it. Write down what happens the week that person is away.</li>
+      <li><strong>Ask the name question.</strong> Find out whether anything personal ever appears in the messages. If it does, write down who would have to approve, and how long they take. Bring the map to session 3.</li>
+    </ol>
+  </section>
+
+  <section class="section" id="quiz">
+    <div class="section-kicker">
+      <span class="klabel">Check yourself</span>
+      <h2>Three questions</h2>
+    </div>
+    <p>Clear all three and session 2 gets stamped in your passport.</p>
+
+    <div class="quiz-q" data-answer="2">
+      <p class="qtext">1 · Why does an AI developer ask to watch one thread end to end before asking for any chat history or sample data?</p>
+      <button class="qopt" type="button">A · Because the chat history is too large to read in a meeting</button>
+      <button class="qopt" type="button">B · Because watching is more polite than asking for data</button>
+      <button class="qopt" type="button">C · Because the thread shows what the manager does between messages: the outlet's order lives in another group, in three languages with nicknames, and the match happens by eye; a request for the history would have delivered half the job and none of the matching</button>
+      <button class="qopt" type="button">D · Because the model needs a worked example before it can be prompted</button>
+      <p class="qwhy">"The workflow as it happens today is the spec." The second group, the nicknames and the match by eye only appear when you watch; no export of the supplier chat contains them.</p>
+    </div>
+
+    <div class="quiz-q" data-answer="0">
+      <p class="qtext">2 · The WhatsApp numbers are the managers' personal phones, with no business account and no API. Why does that belong on the data-state map rather than in a later technical note?</p>
+      <button class="qopt" type="button">A · Because where the messages live decides whether an assistant can read them at all: every chat reaches it only through a hand export, one at a time, from a phone that leaves when its owner does, and no choice of model changes that</button>
+      <button class="qopt" type="button">B · Because personal phones are slower than business accounts</button>
+      <button class="qopt" type="button">C · It does not; the integration team can sort it out after the pilot</button>
+      <button class="qopt" type="button">D · Because it means the managers should be given new phones before anything else</button>
+      <p class="qwhy">"That is a setup question, not a model question." It is also why the manager who left in March took her threads with her: the record was a personal phone.</p>
+    </div>
+
+    <div class="quiz-q" data-answer="3">
+      <p class="qtext">3 · Patient names sometimes appear in the threads, when an outlet orders a special item for a named customer. What does that change?</p>
+      <button class="qopt" type="button">A · Nothing, as long as the assistant only drafts and never sends</button>
+      <button class="qopt" type="button">B · Only the prompt, which should be told to ignore names</button>
+      <button class="qopt" type="button">C · It means the project should be cancelled</button>
+      <button class="qopt" type="button">D · It turns a supplier tool into a personal-data tool under Malaysia's PDPA, which changes who has to approve it: the head office lawyer, who takes four weeks; so the names go on the map as the one box the assistant must never see, before anything is exported</button>
+      <p class="qwhy">"A name in a message turns a supplier tool into a personal-data tool, and that changes who has to approve it." Asked in the meeting it costs three minutes; discovered in a test export, it costs a pilot.</p>
+    </div>
+
+    <p class="quiz-score"></p>
+  </section>
+
+  <section class="section" id="official">
+    <div class="section-kicker">
+      <span class="klabel">Sources covered</span>
+      <h2>What this session teaches, and where it came from</h2>
+    </div>
+    <div class="covered">
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">Five maturity level names: Initial/Ad hoc, Repeatable, Defined, Managed, Optimized</span><span class="note">DAMA International, DAMA-DMBOK, 2nd ed., Technics Publications, 2017, ch. 15; reported from summaries. DMBOK has no level 0. The plain questions beside each rung are ours, not DAMA's; the ladder in depth is in <a href="https://phoebefu6.github.io/learn-asking-right-questions-as-da-with-phoebe/courses/02-reading-their-data-state.html">session 2 of the data analyst sibling</a></span></div>
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">50 percent to 80 percent of time collecting and preparing data</span><span class="note">Steve Lohr, "For Big-Data Scientists, 'Janitor Work' Is Key Hurdle to Insights", The New York Times, 17 Aug 2014; quoted as a range, as printed</span></div>
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">60 percent cleaning and organising, plus 19 percent collecting</span><span class="note">CrowdFlower, 2016 Data Science Report; two separate figures, never combined with Lohr's range into one number</span></div>
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">Door 3, current way, leading into door 4, data state</span><span class="note">The Six Doors are stated in full, with the source of each move, in <a href="https://phoebefu6.github.io/learn-asking-right-questions-as-da-with-phoebe/courses/01-why-the-gap-and-the-six-doors.html">session 1 of the data analyst sibling</a>, the canonical corridor</span></div>
+      <div class="covered-row"><span class="status pill light">◐</span><span class="name">Malaysia's Personal Data Protection Act 2010 (PDPA)</span><span class="note">Named because the constructed case sits under it, as a typical touchpoint rather than a sourced finding. What the Act requires was not read at source and is not claimed; the page teaches only that a name in a message changes who approves</span></div>
+      <div class="covered-row"><span class="status pill light">◐</span><span class="name">Harbourline, Adeline Tan, Kenneth, Farid and the supplier threads</span><span class="note">Constructed. The two chats, the nicknames, the personal phones, the missing order table, the login and the patient names are typical, not sourced; every value, including the 3 points on the login fact, is printed in the bench's bank file</span></div>
+    </div>
+    <p class="mono" style="margin-top:14px">Every fact on this page, and its verification tier, is recorded in the course's source map.</p>
+  </section>
+
+  <section class="cheat" id="cheatsheet">
+    <h3>Session 2 cheat sheet <span>· pin this</span></h3>
+    <div class="grid-2">
+      <div class="cheat-item"><b>Watch before you read</b><span>"Show me one thread from yesterday, start to finish." What they did between messages is the spec.</span></div>
+      <div class="cheat-item"><b>Two chats, one match</b><span>The confirmation in one chat, the outlet's order in another, matched by eye. An assistant reading one chat reads half the job.</span></div>
+      <div class="cheat-item"><b>Typed, recorded, or absent</b><span>Ask where each thing was born. Here three were typed on a phone and the decision was never written down.</span></div>
+      <div class="cheat-item"><b>Setup, not model</b><span>Personal phones, no business account, no API, one export at a time. Where messages live decides whether it can read them.</span></div>
+      <div class="cheat-item"><b>The dictionary and its key</b><span>The product list is the assistant's dictionary. Ask who can open it, by name, and what happens when they leave.</span></div>
+      <div class="cheat-item"><b>The box it must never see</b><span>A name in a message makes it a personal-data tool. Ask early; it changes who approves. Send the map with "which box is wrong?"</span></div>
+    </div>
+  </section>
+
+  <div class="callout next">
+    <span class="nx-pill">Next session</span>
+    <p>Session 3 puts every fact on tonight's map on the bench and prices it. The two chats, the nicknames, the personal phones, the missing record, the dictionary and its key: each is worth a number of points, and the meeting order decides which come out in 45 minutes. The efficient interview, all yes-or-no and leading questions, scores 21 and writes five false beliefs into your notes, two of which tonight disproved: that the orders are in English, and that there is an order table to match against. The Six Doors walked in printed order score 54, the order tuned for an AI developer 55, and the session is honest about why the gap is only one point. You also sort the whole question bank by kind and run your own meeting against Adeline.</p>
+  </div>
+
+  <footer class="pagefoot">
+    <span>Session 2 of 6 · learn-asking-right-questions-as-ai-with-phoebe · by Phoebe Fu &nbsp;·&nbsp; 📚 <a href="https://phoebefu6.github.io/learn-with-phoebe/">Learn with Phoebe ↗</a></span>
+    <span><a href="01-the-gap-from-the-ai-developers-chair.html">← Prev: The gap, from the AI developer's chair</a> &nbsp;·&nbsp; <a href="03-the-ai-developers-questions-and-the-bench.html">Next: The AI developer's questions, and the bench →</a></span>
+  </footer>
+
+</main>
+
+<script src="../assets/app.js?v=1"></script>
+</body>
+</html>

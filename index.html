@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- social:start -->
+<meta name="description" content="Six sessions on the first meeting of any data project, run by an AI developer: how to get the outcome, the decision, the current way of working and the real state of the data out of a business person who knows nothing about data, in words that teach them something while they answer. One invented pharmacy chain, one operations director with 24 hidden facts, and a discovery-meeting bench. Free, by Phoebe Fu.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Learn with Phoebe">
+<meta property="og:title" content="Learn Asking the Right Questions as an AI Developer with Phoebe">
+<meta property="og:description" content="Same operations director, same 45 minutes, five ways of asking. The fast yes-or-no interview scores 21 and records five things that are wrong; the Six Doors score 54; current way first, 55.">
+<meta property="og:url" content="https://phoebefu6.github.io/learn-asking-right-questions-as-ai-with-phoebe/">
+<meta property="og:image" content="https://phoebefu6.github.io/learn-asking-right-questions-as-ai-with-phoebe/assets/og-cover.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Learn Asking the Right Questions as an AI Developer with Phoebe">
+<meta name="twitter:description" content="A discovery-meeting bench: one business person with a hidden fact sheet, 45 minutes, five ways of asking, every point counted in your browser.">
+<meta name="twitter:image" content="https://phoebefu6.github.io/learn-asking-right-questions-as-ai-with-phoebe/assets/og-cover.png">
+<!-- social:end -->
+<title>Learn Asking the Right Questions as an AI Developer with Phoebe</title>
+<link rel="stylesheet" href="assets/style.css?v=2">
+<style>
+
+  .stats-row { display: flex; gap: 2.4rem; margin-top: 1.5rem; flex-wrap: wrap; }
+  .stat b { display: block; font-size: 2.1rem; font-weight: 800; line-height: 1.05; font-variant-numeric: tabular-nums; }
+  .stat span { font-size: .72rem; opacity: .85; text-transform: uppercase; letter-spacing: .09em; font-weight: 600; }
+
+  .course-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr)); gap: 1rem; margin-top: 1.5rem; }
+  .course-card {
+    border: 1px solid var(--hairline);
+    border-top: 4px solid var(--diff, var(--indigo));
+    border-radius: var(--radius);
+    padding: 1.2rem 1.3rem 1.1rem;
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    text-decoration: none;
+    color: var(--ink);
+    background: #fff;
+    transition: box-shadow .15s ease, border-color .15s ease, transform .15s ease;
+    position: relative;
+  }
+  .course-card:hover { border-color: var(--indigo-soft); border-top-color: var(--diff, var(--indigo)); box-shadow: 0 8px 28px rgba(var(--shadow-rgb),.16); transform: translateY(-3px); }
+  .course-card .cicon { font-size: 1.7rem; line-height: 1; }
+  .course-card .cnum { font-size: .72rem; font-weight: 700; color: var(--indigo); text-transform: uppercase; letter-spacing: .1em; }
+  .course-card h3 { font-size: 1.05rem; font-weight: 800; line-height: 1.3; }
+  .course-card p { font-size: .85rem; color: var(--muted); flex: 1; }
+  .course-card .meta { display: flex; gap: .4rem; flex-wrap: wrap; }
+
+  .diff-legend { display: flex; gap: 1rem; margin-top: 1.6rem; font-size: .74rem; color: var(--muted); font-weight: 600; flex-wrap: wrap; }
+  .diff-legend i { display: inline-block; width: .85rem; height: .35rem; border-radius: 999px; margin-right: .35rem; vertical-align: middle; }
+
+  .paths { margin-top: 2.6rem; }
+  .paths h2 { font-size: 1.3rem; font-weight: 800; margin-bottom: .3rem; }
+  .paths .plede { color: var(--muted); font-size: .92rem; margin-bottom: .8rem; }
+  .path { display: flex; gap: .55rem; align-items: center; padding: .75rem 0; border-bottom: .5px solid var(--hairline); flex-wrap: wrap; }
+  .path:last-child { border-bottom: none; }
+  .path b { min-width: 15.5rem; font-size: .9rem; }
+  .path .pstep { background: var(--indigo-50); color: var(--indigo); border-radius: 999px; padding: .16rem .68rem; font-weight: 700; font-size: .8rem; text-decoration: none; transition: all .12s ease; }
+  .path .pstep:hover { background: var(--indigo); color: #fff; }
+  .path .parr { color: var(--faint); font-weight: 700; }
+
+  .mm-section { margin-top: 1.6rem; }
+  .mm-section h2 { font-size: 1.3rem; font-weight: 800; margin-bottom: .2rem; }
+  .mm-section .mm-lede { color: var(--muted); font-size: .92rem; margin-bottom: .4rem; }
+  .mm-wrap { border: 1px solid var(--hairline); border-radius: var(--radius); background: linear-gradient(180deg,#fff,var(--indigo-50)); padding: .6rem; overflow-x: auto; }
+  .mm-svg { width: 100%; height: auto; display: block; max-width: 60rem; margin: 0 auto; min-width: 34rem; }
+  .mm-link { cursor: pointer; text-decoration: none; }
+  .mm-node rect { transition: opacity .15s ease, filter .15s ease; }
+  .mm-node text { pointer-events: none; }
+  .mm-link:hover .mm-node rect { filter: brightness(1.06); }
+  .mm-edge { transition: opacity .15s ease; }
+
+  .not-this { border: 1px solid var(--hairline); border-left: 4px solid var(--clay); border-radius: var(--radius); background: #fff; padding: 1.1rem 1.3rem; margin-top: 1.2rem; }
+  .not-this h3 { font-size: .95rem; font-weight: 800; margin-bottom: .5rem; }
+  .siblings { display: grid; grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr)); gap: .8rem; margin-top: 1rem; }
+  .sibling { border: 1px solid var(--hairline); border-radius: 12px; padding: .9rem 1rem; background: #fff; text-decoration: none; color: var(--ink); font-size: .86rem; }
+  .sibling b { display: block; font-size: .92rem; margin-bottom: .2rem; }
+  .sibling span { color: var(--muted); }
+  .sibling.here { border-color: var(--indigo); background: var(--indigo-50); }
+</style>
+</head>
+<body>
+
+<header class="masthead">
+  <div class="wrap">
+    <div class="eyebrow">Learn with Phoebe · AI &amp; LLMs</div>
+    <h1>Learn Asking the Right Questions as an <span class="accent">AI Developer</span> with Phoebe</h1>
+    <p class="sub">An operations director says: "Can AI answer the supplier WhatsApps?" It sounds like a technical request, and the AI developer who treats it as one builds an assistant that says yes to a substitute drug nobody checked. Most of what goes wrong in data work goes wrong in the first meeting, quietly, with both sides sure they agreed. Six sessions on running that meeting as an AI developer: the six doors every discovery conversation has, why current way is the one this role opens widest, the plain second sentence that lets a business person learn how data work thinks while she answers, and a bench that puts one invented operations director with 24 hidden facts in your browser and counts what each way of asking is worth.</p>
+    <div class="stats-row">
+      <div class="stat"><b data-count="6">6</b><span>sessions</span></div>
+      <div class="stat"><b data-count="6">6</b><span>doors</span></div>
+      <div class="stat"><b data-count="24">24</b><span>hidden facts</span></div>
+      <div class="stat"><b data-count="5">5</b><span>ways of asking, counted</span></div>
+      <div class="stat"><b data-count="45">45</b><span>min per session</span></div>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <section class="section">
+    <div class="paths" style="margin-top:0">
+      <h2>The six sessions 🎯 <span style="font-size:.85rem;font-weight:600;color:var(--muted)">· from "can AI answer the WhatsApps" to a brief she can read</span></h2>
+      <p class="plede">The running case is <strong>Harbourline</strong>, an invented chain of 38 pharmacy and clinic outlets across Singapore and Malaysia, and its operations director Adeline Tan, who has never heard the word pipeline. Every fact on her sheet is printed in the bench's bank file; the course claims the mechanism, never the numbers as facts about pharmacies.</p>
+    </div>
+
+    <div class="course-grid">
+      <a class="course-card" href="courses/01-the-gap-from-the-ai-developers-chair.html" style="--diff:#FBBF24">
+        <span class="cicon">🤝</span>
+        <span class="cnum">Session 1 · core</span>
+        <h3>The gap, from the AI developer's chair</h3>
+        <p>Why "can AI answer the WhatsApps" is a request about a workflow nobody has watched, the current-way door opened widest, and the split every assistant rests on: lookups the assistant does, decisions a person keeps.</p>
+        <span class="meta"><span class="pill amber">▶ Start here</span></span>
+      </a>
+      <a class="course-card" href="courses/02-the-thread-end-to-end-and-its-data.html" style="--diff:#FBBF24">
+        <span class="cicon">🗂️</span>
+        <span class="cnum">Session 2 · core</span>
+        <h3>The thread end to end, and its data</h3>
+        <p>One real thread watched from the first message to the OK, then where each half lives: supplier chats, outlet chats in three languages, no order table, a product list with the wrong names.</p>
+        <span class="meta"></span>
+      </a>
+      <a class="course-card" href="courses/03-the-ai-developers-questions-and-the-bench.html" style="--diff:#F87171">
+        <span class="cicon">🎛️</span>
+        <span class="cnum">Session 3 · bench night</span>
+        <h3>The AI developer's questions, and the bench</h3>
+        <p>Five kinds of question and the same operations director run five ways. The fast interview scores 21 and writes down "reply automatically"; the doors in order 54; current way widest, 55.</p>
+        <span class="meta"><span class="pill amber">★ the bench</span></span>
+      </a>
+      <a class="course-card" href="courses/04-teaching-while-you-ask.html" style="--diff:#FBBF24">
+        <span class="cicon">💬</span>
+        <span class="cnum">Session 4 · core</span>
+        <h3>Teaching while you ask</h3>
+        <p>The one concept worth ninety seconds in an AI developer's meeting: an assistant drafts the lookups and a person keeps the decisions. Twelve teach-back lines rewritten for a person who has never seen a model.</p>
+        <span class="meta"></span>
+      </a>
+      <a class="course-card" href="courses/05-three-projects-and-the-assistant-that-drafts.html" style="--diff:#FBBF24">
+        <span class="cicon">🌱</span>
+        <span class="cnum">Session 5 · core</span>
+        <h3>Three projects, and the assistant that only drafts</h3>
+        <p>Her pains become three candidates, and the first is a log, not a bot. Then an assistant that drafts the plain OKs for one manager and four suppliers, and never approves a substitute.</p>
+        <span class="meta"></span>
+      </a>
+      <a class="course-card" href="courses/06-the-mock-meeting-and-the-brief.html" style="--diff:#FB923C">
+        <span class="cicon">📄</span>
+        <span class="cnum">Session 6 · capstone</span>
+        <h3>The mock meeting and the one-page brief</h3>
+        <p>A full run on the bench with your own sheet, scored, then the brief she can read: the workflow in her words, what the assistant will never decide, the visit-log test. Final scorecard.</p>
+        <span class="meta"><span class="pill amber">🔒 final scorecard</span></span>
+      </a>
+    </div>
+
+    <div class="diff-legend">
+      <span><i style="background:#FBBF24"></i>core</span>
+      <span><i style="background:#F87171"></i>bench night</span>
+      <span><i style="background:#FB923C"></i>capstone</span>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="paths" style="margin-top:0">
+      <h2>Your passport 🎫</h2>
+      <p class="plede">Clear all three quiz questions in a session and it gets stamped. Six stamps means you can walk into a meeting with a business person who knows nothing about data, leave with the decision, the current way and the real data state, and send a brief she can read the next morning. Stamps live in this browser only.</p>
+    </div>
+    <div class="pp-strip"></div>
+  </section>
+
+  <section class="section">
+    <div class="paths" style="margin-top:0">
+      <h2>Four chairs at the same table 🪑</h2>
+      <p class="plede">The same framework, the same company and the same bench engine, built four times for four roles. Each course marks a different door to open widest and carries its own question bank and fact sheet. The framework itself lives in the data analyst course's session 1; this course links to it.</p>
+    </div>
+    <div class="siblings">
+      <a class="sibling" href="https://phoebefu6.github.io/learn-asking-right-questions-as-da-with-phoebe/"><b>As a data analyst ↗</b><span>Widest door: decision. Who does what with the number, and by when.</span></a>
+      <a class="sibling" href="https://phoebefu6.github.io/learn-asking-right-questions-as-ds-with-phoebe/"><b>As a data scientist ↗</b><span>Widest door: outcome. What to predict, what a wrong guess costs, how often it happens today.</span></a>
+      <a class="sibling" href="https://phoebefu6.github.io/learn-asking-right-questions-as-de-with-phoebe/"><b>As a data engineer ↗</b><span>Widest door: data state. Sources, owners, freshness, access, who breaks it.</span></a>
+      <a class="sibling here" href="courses/01-the-gap-from-the-ai-developers-chair.html"><b>As an AI developer · this course</b><span>Widest door: current way. The human workflow today, the error you can tolerate, who checks the output.</span></a>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="not-this">
+      <h3>What this is not, so you land in the right place 🧭</h3>
+      <table class="clean">
+        <tr><th>If your question is</th><th>Go here instead</th></tr>
+        <tr><td>I am the executive. How do I read a number with confidence and brief an analyst?</td><td><a href="https://phoebefu6.github.io/learn-data-literacy-with-phoebe/">Data Literacy ↗</a></td></tr>
+        <tr><td>I have been handed a question. How do I sharpen it and say what the data can and cannot answer?</td><td><a href="https://phoebefu6.github.io/learn-data-thinking-with-phoebe/">Data Thinking ↗</a></td></tr>
+        <tr><td>How do I present findings, handle a room, and influence a decision?</td><td><a href="https://phoebefu6.github.io/learn-communication-with-phoebe/">Communication ↗</a></td></tr>
+        <tr><td>How do I run product discovery as a discipline, week after week?</td><td><a href="https://phoebefu6.github.io/learn-product-thinking-with-phoebe/">Product Thinking ↗</a></td></tr>
+        <tr><td>How do I frame a decision properly, with options, evidence and a call?</td><td><a href="https://phoebefu6.github.io/learn-decision-intelligence-with-phoebe/">Decision Intelligence ↗</a></td></tr>
+        <tr><td>What is a data maturity model, and how do I run a real assessment?</td><td><a href="https://phoebefu6.github.io/learn-governance-101-with-phoebe/">Governance 101 ↗</a></td></tr>
+        <tr><td><strong>I am the data person. I have 45 minutes with a business person who knows nothing about data, and I need to leave with something I can build.</strong></td><td><strong>you are in the right place</strong></td></tr>
+      </table>
+      <p style="margin-top:.7rem;font-size:.86rem;color:var(--muted)"><strong>The first meeting, run by the data side.</strong> The decision, the current way and the real data state, got out of a person in words that teach her something as she answers. Reading numbers, sharpening a handed question, presenting, and discovery as a product discipline are each taught once, in the course that owns them, and linked from here rather than repeated.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="paths">
+      <h2>Choose your path 🗺️</h2>
+      <p class="plede">Three doors into the same conviction: the way of asking, not the person across the table, decides what you leave with.</p>
+      <div class="path"><b>🚪 I have a meeting on Monday</b>
+        <a class="pstep" href="courses/01-the-gap-from-the-ai-developers-chair.html">1</a><span class="parr">→</span>
+        <a class="pstep" href="courses/03-the-ai-developers-questions-and-the-bench.html">3</a><span class="parr">→</span>
+        <a class="pstep" href="courses/06-the-mock-meeting-and-the-brief.html">6</a>
+        <span style="font-size:.82rem;color:var(--muted)">the sheet, the rehearsal on the bench, the brief you send the next morning</span>
+      </div>
+      <div class="path"><b>🤝 I keep getting asked to add AI</b>
+        <a class="pstep" href="courses/01-the-gap-from-the-ai-developers-chair.html">1</a><span class="parr">→</span>
+        <a class="pstep" href="courses/02-the-thread-end-to-end-and-its-data.html">2</a><span class="parr">→</span>
+        <a class="pstep" href="courses/05-three-projects-and-the-assistant-that-drafts.html">5</a>
+        <span style="font-size:.82rem;color:var(--muted)">the workflow behind the request, where each half of it lives, three projects starting with a log, not a bot</span>
+      </div>
+      <div class="path"><b>🎯 The whole meeting</b>
+        <a class="pstep" href="courses/01-the-gap-from-the-ai-developers-chair.html">1</a><span class="parr">→</span>
+        <a class="pstep" href="courses/02-the-thread-end-to-end-and-its-data.html">2</a><span class="parr">→</span>
+        <a class="pstep" href="courses/03-the-ai-developers-questions-and-the-bench.html">3</a><span class="parr">→</span>
+        <a class="pstep" href="courses/04-teaching-while-you-ask.html">4</a><span class="parr">→</span>
+        <a class="pstep" href="courses/05-three-projects-and-the-assistant-that-drafts.html">5</a><span class="parr">→</span>
+        <a class="pstep" href="courses/06-the-mock-meeting-and-the-brief.html">6</a>
+        <span style="font-size:.82rem;color:var(--muted)">from the request as received to a brief she can read, with her learning something on the way</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="paths" style="margin-top:0">
+      <h2>What is honest here 🧾</h2>
+      <p class="plede">The company is invented and says so on every page that uses it. The bench is counted from a printed file. Where a page rests on a book or a paper, it says which and how it was read, and where a widely quoted number could not be traced, the page says that instead of quoting it.</p>
+    </div>
+    <table class="clean">
+      <tr><th>Claim</th><th>Status</th></tr>
+      <tr><td>Harbourline, Adeline Tan, and every fact on her sheet</td><td><strong>Constructed.</strong> Written to be typical of a mid-size retail chain; printed in full in the bench's bank file; never a claim about a real business</td></tr>
+      <tr><td>Every count on the bench: net value, false beliefs, doors, the 20-minute counter</td><td><strong>Really computed</strong> in your browser from the printed bank, and verified headlessly in node before any page quoted a number</td></tr>
+      <tr><td>Tappers and listeners: about 50 percent predicted, 3 of 120 named</td><td><strong>Reported</strong> from Heath and Heath, Made to Stick (2007), citing Newton's 1990 Stanford dissertation, which was not read at source</td></tr>
+      <tr><td>Measurement as a reduction of uncertainty about a decision</td><td><strong>Hubbard, How to Measure Anything (2014),</strong> definition as it appears across summaries; the book was not opened here</td></tr>
+      <tr><td>Ask about the past, not the future; people say yes to be polite</td><td><strong>Fitzpatrick, The Mom Test (2013).</strong> Only his verified wording is quoted; a paraphrase that circulates as a quote is not</td></tr>
+      <tr><td>The analytics translator role and its predicted headcount</td><td><strong>Role named from the 2018 HBR article;</strong> the headcount figure was not read at source and is not quoted</td></tr>
+          </table>
+  </section>
+
+  <section class="section mm-section">
+    <h2>The knowledge map 🧠</h2>
+    <p class="mm-lede">The whole course at a glance - hover a session to spotlight its concepts, click any node to jump in.</p>
+    <div class="mm-wrap"><div id="mindmap"></div></div>
+  </section>
+
+  <footer class="pagefoot">
+    <span>learn-asking-right-questions-as-ai-with-phoebe · by Phoebe Fu &nbsp;·&nbsp; 📚 <a href="https://phoebefu6.github.io/learn-with-phoebe/">Learn with Phoebe ↗</a></span>
+    <span>Neighbours on the shelf: <a href="https://phoebefu6.github.io/learn-ai-red-team-with-phoebe/">AI Red Team ↗</a> &nbsp;·&nbsp; <a href="https://phoebefu6.github.io/learn-ai-observability-with-phoebe/">AI Observability ↗</a> &nbsp;·&nbsp; <a href="https://phoebefu6.github.io/learn-data-thinking-with-phoebe/">Data Thinking ↗</a></span>
+  </footer>
+
+</main>
+
+<script>
+window.MINDMAP_DATA = {
+  "title": "Asking the\nRight Questions",
+  "centerColor": "#065F46",
+  "sessions": [
+    {
+      "label": "The gap, from\nthe AI developer's chair",
+      "href": "courses/01-the-gap-from-the-ai-developers-chair.html",
+      "color": "#FBBF24",
+      "concepts": [
+        {
+          "label": "A workflow nobody watched",
+          "href": "courses/01-the-gap-from-the-ai-developers-chair.html"
+        },
+        {
+          "label": "Current-way door, widest",
+          "href": "courses/01-the-gap-from-the-ai-developers-chair.html"
+        },
+        {
+          "label": "Lookups and decisions",
+          "href": "courses/01-the-gap-from-the-ai-developers-chair.html"
+        }
+      ]
+    },
+    {
+      "label": "The thread end to\nend, and its data",
+      "href": "courses/02-the-thread-end-to-end-and-its-data.html",
+      "color": "#FBBF24",
+      "concepts": [
+        {
+          "label": "One thread, end to end",
+          "href": "courses/02-the-thread-end-to-end-and-its-data.html"
+        },
+        {
+          "label": "Three languages, no table",
+          "href": "courses/02-the-thread-end-to-end-and-its-data.html"
+        },
+        {
+          "label": "Where each half lives",
+          "href": "courses/02-the-thread-end-to-end-and-its-data.html"
+        }
+      ]
+    },
+    {
+      "label": "The AI developer's\nquestions, and the bench",
+      "href": "courses/03-the-ai-developers-questions-and-the-bench.html",
+      "color": "#F87171",
+      "concepts": [
+        {
+          "label": "Five kinds of question",
+          "href": "courses/03-the-ai-developers-questions-and-the-bench.html"
+        },
+        {
+          "label": "Fast 21, doors 54, tuned 55",
+          "href": "courses/03-the-ai-developers-questions-and-the-bench.html"
+        },
+        {
+          "label": "\"Reply on its own\" costs 4",
+          "href": "courses/03-the-ai-developers-questions-and-the-bench.html"
+        }
+      ]
+    },
+    {
+      "label": "Teaching while\nyou ask",
+      "href": "courses/04-teaching-while-you-ask.html",
+      "color": "#FBBF24",
+      "concepts": [
+        {
+          "label": "Drafts, not decisions",
+          "href": "courses/04-teaching-while-you-ask.html"
+        },
+        {
+          "label": "One concept per meeting",
+          "href": "courses/04-teaching-while-you-ask.html"
+        },
+        {
+          "label": "Twelve teach-back lines",
+          "href": "courses/04-teaching-while-you-ask.html"
+        }
+      ]
+    },
+    {
+      "label": "Three projects, and the\nassistant that only drafts",
+      "href": "courses/05-three-projects-and-the-assistant-that-drafts.html",
+      "color": "#FBBF24",
+      "concepts": [
+        {
+          "label": "A log before a bot",
+          "href": "courses/05-three-projects-and-the-assistant-that-drafts.html"
+        },
+        {
+          "label": "Three candidates, scored",
+          "href": "courses/05-three-projects-and-the-assistant-that-drafts.html"
+        },
+        {
+          "label": "Never approves a substitute",
+          "href": "courses/05-three-projects-and-the-assistant-that-drafts.html"
+        }
+      ]
+    },
+    {
+      "label": "The mock meeting\nand the one-page brief",
+      "href": "courses/06-the-mock-meeting-and-the-brief.html",
+      "color": "#FB923C",
+      "concepts": [
+        {
+          "label": "Your run, scored",
+          "href": "courses/06-the-mock-meeting-and-the-brief.html"
+        },
+        {
+          "label": "The one-page brief",
+          "href": "courses/06-the-mock-meeting-and-the-brief.html"
+        },
+        {
+          "label": "Within 24 hours",
+          "href": "courses/06-the-mock-meeting-and-the-brief.html"
+        }
+      ]
+    }
+  ]
+};
+</script>
+<script src="assets/mindmap.js?v=1"></script>
+<script src="assets/app.js?v=1"></script>
+</body>
+</html>

@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- social:start -->
+<meta name="description" content="Session 4 of 6. The second sentence on every open question, for an AI developer: the model words she would have to ask about and their plain replacements, the one concept worth ninety seconds (an assistant drafts the lookups and a person keeps the decisions), and the difference between a lesson and a lecture.">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Learn with Phoebe">
+<meta property="og:title" content="Teaching while you ask - learn asking the right questions as an AI developer with phoebe">
+<meta property="og:description" content="Session 4 of 6. Your curse of knowledge, one concept per meeting, lesson not lecture, and twelve teach-back lines made plain for a person who runs pharmacies.">
+<meta property="og:url" content="https://phoebefu6.github.io/learn-asking-right-questions-as-ai-with-phoebe/courses/04-teaching-while-you-ask.html">
+<meta property="og:image" content="https://phoebefu6.github.io/learn-asking-right-questions-as-ai-with-phoebe/assets/og-cover.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Teaching while you ask - learn asking the right questions as an AI developer with phoebe">
+<meta name="twitter:description" content="Session 4 of 6. The second sentence, made plain enough to teach.">
+<meta name="twitter:image" content="https://phoebefu6.github.io/learn-asking-right-questions-as-ai-with-phoebe/assets/og-cover.png">
+<!-- social:end -->
+<title>Session 4 · Teaching while you ask - learn asking the right questions as an AI developer with phoebe</title>
+<link rel="stylesheet" href="../assets/style.css?v=1">
+</head>
+<body>
+
+<div class="toolbar">
+  <div class="wrap">
+    <span class="crumb"><a href="../index.html">learn-asking-right-questions-as-ai-with-phoebe</a> / Session 4 of 6</span>
+    <button class="btn" id="toggle-all" type="button">Expand all</button>
+    <button class="btn primary" id="zoom-toggle" type="button">Projector zoom: off</button>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="wrap">
+    <div class="eyebrow">Learn Asking the Right Questions as an AI Developer with Phoebe · Session 4 of 6</div>
+    <h1>Teaching <span class="accent">while you ask</span></h1>
+    <p class="sub">Every open question on your sheet has a second sentence: why you are asking, said out loud. Session 1 showed what it buys, a point of trust and one true thing learned. Tonight is about the sentence itself, because the version most AI developers write is true and useless. "Retrieval grounds the model, so hallucination drops" is a correct principle that teaches Adeline nothing, since three of its words are words she would have to ask about, and she will not ask. She will nod. The work of this session is making twelve second sentences plain enough that a person who runs pharmacies learns one real thing from each, without anyone giving a lecture.</p>
+    <div class="chip-row">
+      <span class="chip level">🟡 Core</span>
+      <span class="chip audience">AI developers, and anyone asked to "add AI"</span>
+      <span class="chip audience">No code. A pen.</span>
+      <span class="chip time">45 min</span>
+    </div>
+    <div class="agenda">
+      <span class="a1" style="flex:1">0-3 · Welcome</span>
+      <span class="a2" style="flex:4">3-18 · The curse, one concept, lesson not lecture</span>
+      <span class="a3" style="flex:5">18-40 · Build-along: twelve lines, made plain</span>
+      <span class="a4" style="flex:1">40-45 · Q&amp;A</span>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <section class="section" id="intro">
+    <div class="section-kicker">
+      <span class="klabel">Part 0</span>
+      <h2>Where we start</h2>
+    </div>
+    <p class="lede">You have a sheet of open questions with a teach-back line beside each, and session 3 put it on the bench. The questions are fine. The second sentences are the risk, because you wrote them in the vocabulary you build in, and you cannot hear that from the inside. Adeline Tan, operations director of Harbourline, a constructed chain of 38 pharmacy and clinic outlets, is the reader tonight. She asked "Can AI answer the supplier WhatsApps?", and the door that matters most for that request is the current way, door 3 of the <a href="https://phoebefu6.github.io/learn-asking-right-questions-as-da-with-phoebe/courses/01-why-the-gap-and-the-six-doors.html">corridor stated in full here</a>. The aim tonight is narrow: by the end of a 45-minute meeting she can repeat one idea about AI work to her board in her own words, and the other lines have quietly landed as single sentences she did not have to stop and decode. The <a href="https://phoebefu6.github.io/learn-communication-with-phoebe/">Communication course</a> owns presenting and influence; this is only the sentence you say before a question.</p>
+
+    <div class="legend">
+      <span class="pill">🎫 Clear all three quiz questions to stamp your passport</span>
+      <span class="pill">Live = presented in the 45 minutes</span>
+      <span class="pill">Self-study = the full depth, after class</span>
+      <span class="pill">★ Build-along = write it yourself</span>
+    </div>
+
+    <div class="callout win">
+      <p><strong>★ What you walk out with tonight.</strong> Twelve teach-back lines with every word she would have to ask about replaced, each still one sentence; one concept chosen for the meeting, "the assistant drafts the lookups and a person keeps the decisions", with its ninety-second version written in three plain sentences; and the sentence you hope she says to her board. Session 5 takes the same sheet and turns her answers into three projects, one of which is an assistant that only drafts.</p>
+    </div>
+  </section>
+
+  <section class="section" id="part-1">
+    <div class="section-kicker">
+      <span class="klabel">Part 1 · covers why you cannot hear your own jargon</span>
+      <h2>Your curse of knowledge, not hers</h2>
+      <span class="tag concept">5 min live</span>
+    </div>
+    <p class="lede">In 1989 Camerer, Loewenstein and Weber showed that better-informed people cannot fully set their information aside when predicting what less-informed people will understand, and named it the curse of knowledge. <a href="https://phoebefu6.github.io/learn-tech-writing-with-phoebe/courses/01-why-docs-fail.html">Tech Writing session 1 teaches it in depth</a>, with what it does to documentation. The AI developer's version is smaller and sharper: a teach-back line written in the words of the build. "Retrieval grounds the model, so hallucination drops" is tapping a tune. The developer hears the whole song, the vector store, the context window, the eval that showed it, and judges the line clear from inside that experience. Adeline hears three knocks and one word she has read in the newspaper.</p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 330" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="One teach-back line drawn twice. The top panel reads: retrieval grounds the model, so hallucination drops; the words retrieval, model and hallucination are circled in plum as the three she would have to ask about. The bottom panel is the same claim in plain words: if it looks in your product list first, before it writes a reply, it makes up fewer answers. Arrows run from each circled word to its replacement. At the right a small figure of the operations director says sorry, what do you mean.">
+        <defs>
+          <filter id="s4aSk" x="-3%" y="-3%" width="106%" height="106%"><feTurbulence type="fractalNoise" baseFrequency="0.02" numOctaves="2" seed="53" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="2.4" xChannelSelector="R" yChannelSelector="G"/></filter>
+          <pattern id="s4aHc" patternUnits="userSpaceOnUse" width="7" height="7" patternTransform="rotate(-38)"><line x1="0" y1="0" x2="0" y2="7" stroke="#047857" stroke-width="1" opacity=".5"/></pattern>
+          <marker id="s4aAr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M1 1 L9 5 L1 9" fill="none" stroke="#0F231B" stroke-width="1.6" stroke-linecap="round"/></marker>
+        </defs>
+        <style>
+          .s4aH { font: 800 12px Inter, sans-serif; fill: #0F231B; }
+          .s4aL { font: 600 12px Inter, sans-serif; fill: #0F231B; }
+          .s4aS { font: 400 11px Inter, sans-serif; fill: #46605A; }
+          .s4aB { font: 800 11px Inter, sans-serif; fill: #6A1F50; }
+          .s4aN { font: 400 12px Inter, sans-serif; fill: #46605A; }
+        </style>
+
+        <text class="s4aH" x="30" y="26">ONE LINE, DRAWN TWICE</text>
+        <text class="s4aS" x="230" y="26">the claim does not change; the three words she would have to ask about do</text>
+
+        <g filter="url(#s4aSk)" fill="none" stroke="#0F231B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <!-- before panel -->
+          <rect x="40" y="50" width="680" height="86" rx="6" transform="rotate(-0.3 380 93)" fill="#FFFFFF"/>
+          <!-- the three circled words -->
+          <ellipse cx="91" cy="98" rx="38" ry="14" stroke="#8E2C6B"/>
+          <ellipse cx="252" cy="98" rx="30" ry="14" stroke="#8E2C6B"/>
+          <ellipse cx="390" cy="98" rx="54" ry="14" stroke="#8E2C6B"/>
+          <!-- after panel -->
+          <rect x="40" y="200" width="680" height="86" rx="6" transform="rotate(0.4 380 243)" fill="#ECFDF5"/>
+          <!-- arrows from each circled word to its replacement -->
+          <path d="M91 113 C95 160 160 180 170 224" stroke="#8E2C6B" marker-end="url(#s4aAr)"/>
+          <path d="M252 113 C262 160 320 190 330 224" stroke="#8E2C6B" marker-end="url(#s4aAr)"/>
+          <path d="M390 113 C430 160 500 190 510 224" stroke="#8E2C6B" marker-end="url(#s4aAr)"/>
+          <!-- the replacements, underlined in plum -->
+          <path d="M60 246 L258 246" stroke="#8E2C6B"/>
+          <path d="M330 246 L464 246" stroke="#8E2C6B"/>
+          <path d="M512 246 L672 246" stroke="#8E2C6B"/>
+          <!-- Adeline, listening -->
+          <circle cx="792" cy="112" r="11"/>
+          <path d="M772 148 C776 128 808 128 812 148"/>
+        </g>
+
+        <text class="s4aB" x="52" y="68">BEFORE, IN THE DEVELOPER'S WORDS</text>
+        <text class="s4aS" x="300" y="68">three words she would ask about; she nods instead</text>
+        <text class="s4aL" x="62" y="102">Retrieval</text>
+        <text class="s4aL" x="140" y="102">grounds the</text>
+        <text class="s4aL" x="232" y="102">model,</text>
+        <text class="s4aL" x="296" y="102">so the</text>
+        <text class="s4aL" x="352" y="102">hallucination</text>
+        <text class="s4aL" x="460" y="102">rate drops.</text>
+
+        <text class="s4aS" x="752" y="176">"sorry, what</text>
+        <text class="s4aS" x="752" y="191">do you mean?"</text>
+
+        <text class="s4aB" x="52" y="218">AFTER, IN HERS</text>
+        <text class="s4aL" x="60" y="240">if it looks in your product list first,</text>
+        <text class="s4aL" x="330" y="240">before it writes a reply,</text>
+        <text class="s4aL" x="512" y="240">it makes up fewer answers.</text>
+        <text class="s4aS" x="60" y="272">same claim, no word to ask about, still one sentence; she learns the product list is part of the build</text>
+
+        <text class="s4aN" x="30" y="316">The circled words were invisible to the person who wrote the line. Reading it aloud to someone else is the only way to see them.</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - the top line is correct and the bottom line is the same line; only the bottom one teaches her anything</figcaption>
+    </figure>
+
+    <details class="card" open>
+      <summary><span class="mode live">Live</span>The words she would have to ask about<span class="mini">3 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Take any teach-back line on your sheet and read it aloud to someone who does not build software. Any word that makes them say "sorry, what do you mean?" is a jargon cost, and session 3's bench prices it exactly: a jargon question takes five minutes, because you have to explain, and it costs a point of trust, because she is a little less sure you understand her shop. The line was meant to earn trust. With one wrong word it spends it.</p>
+        <p>The usual offenders for an AI developer, with the plain words that replace each. <strong>Model</strong>: the part that reads a message and writes a reply. <strong>Prompt</strong>: the written instructions it is given before every message. <strong>Fine-tune</strong>: teaching it from your own past threads so it writes the way your managers do. <strong>RAG</strong> (retrieval-augmented generation): letting it look things up in your product list before it answers. <strong>Embedding</strong>: a way of finding two messages that mean the same thing even when the words differ, like two nicknames for one product. <strong>Hallucination</strong>: when it writes something confident that is not true. <strong>Eval</strong>: a set of real past threads with the right replies, kept to test it against. <strong>Guardrail</strong>: a rule it cannot break, such as never saying yes to a substitute. None of the plain versions is longer than a breath, and every one of them is a thing she can picture in a WhatsApp thread.</p>
+        <p>The test is not "would a smart person understand this". Adeline is a smart person, and she has read about AI in the papers, which makes it worse: "hallucination" sounds familiar enough to nod at and means nothing precise to her. The test is whether the word is one she uses at work, and the honest way to find out is her face, which is why the reading is done aloud and never on paper.</p>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>Why plain is not dumbed down<span class="mini">2 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Douglas Hubbard's definition of measurement, a quantitatively expressed reduction of uncertainty based on one or more observations, is itself a plain sentence. It contains no term of art, and an operations director can check it against her own experience without a glossary. Precision and plainness are not in tension; the words that sound precise to a developer are usually just familiar.</p>
+        <p>There is a professional reason plain is the norm and not a courtesy, and for an AI developer it is sharper than for most. The person who signs off an assistant has to be able to check what it will do. A teach-back line she cannot decode is a claim she cannot test, and a claim she cannot test about something that talks to 36 suppliers is one she either accepts on faith or quietly vetoes. Adeline has already switched off one thing that replied on its own, the POS vendor's chatbot, which answered a customer's prescription question wrongly last year; she switched it off within a week. Plain words are how you make your reasoning inspectable by the person who remembers that week.</p>
+      </div>
+    </details>
+
+    <div class="callout example">
+      <span class="ex-pill">Real world</span>
+      <p><strong>The nod that cost six weeks.</strong> A constructed case, and a common shape. A developer told Adeline "we will put a human in the loop for low-confidence intents", watched her nod, and moved on. Six weeks later, reviewing the first demo, she asked why the assistant had replied OK to a supplier's substitute on its own. To her, "low-confidence" had meant the messages the assistant found hard to read, and a clearly written substitute is easy to read. To the developer it had meant something else again. Nobody lied and nobody was careless. A phrase the developer could not hear as jargon went past a person too polite to stop the meeting, and the belief it left behind, that the assistant could say yes when the message was clear, was not visible until a demo had been built on top of it.</p>
+    </div>
+
+    <div class="tryrow" data-fn="wordcount" data-multiline="1" data-title="Rewrite one of your lines" data-hint="Take a teach-back line from your session 1 sheet. Circle every word Adeline would have to ask about, then write the line again with each one replaced. It must still be one sentence." data-seed="" data-cta="Count it"></div>
+  </section>
+
+  <section class="section" id="part-2">
+    <div class="section-kicker">
+      <span class="klabel">Part 2 · covers the one idea that gets explained properly</span>
+      <h2>One concept per meeting</h2>
+      <span class="tag concept">5 min live</span>
+    </div>
+    <p class="lede">Twelve teach-back lines, and she will remember one. That is not a failure of the other eleven; single sentences land as background, and background is what most of them should be. But one idea per meeting deserves ninety seconds of proper explanation: what it is, why it matters, what it means for a real person's morning. The choice is not the idea you find most interesting. It is the idea a false belief would attach to if you left it unexplained, because for an AI developer that belief does not stay in the notes. It ships as behaviour, in a thread with a supplier.</p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 360" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Twelve small cards in a row along the bottom, numbered one to twelve, two per door. The third slot is empty and dashed; an arrow rises from it to one enlarged plum card above, which carries the concept the assistant drafts and a person keeps the decisions, written as its ninety-second version in three plain sentences: what it is, why a substitute is a decision, and what it means for Farid's morning.">
+        <defs>
+          <filter id="s4bSk" x="-3%" y="-3%" width="106%" height="106%"><feTurbulence type="fractalNoise" baseFrequency="0.02" numOctaves="2" seed="59" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="2.4" xChannelSelector="R" yChannelSelector="G"/></filter>
+          <pattern id="s4bHc" patternUnits="userSpaceOnUse" width="7" height="7" patternTransform="rotate(-38)"><line x1="0" y1="0" x2="0" y2="7" stroke="#047857" stroke-width="1" opacity=".5"/></pattern>
+          <marker id="s4bAr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M1 1 L9 5 L1 9" fill="none" stroke="#0F231B" stroke-width="1.6" stroke-linecap="round"/></marker>
+        </defs>
+        <style>
+          .s4bH { font: 800 12px Inter, sans-serif; fill: #0F231B; }
+          .s4bL { font: 600 12px Inter, sans-serif; fill: #0F231B; }
+          .s4bS { font: 400 11px Inter, sans-serif; fill: #46605A; }
+          .s4bB { font: 800 11px Inter, sans-serif; fill: #6A1F50; }
+          .s4bV { font: 800 16px Inter, sans-serif; fill: #065F46; }
+          .s4bN { font: 400 12px Inter, sans-serif; fill: #46605A; }
+        </style>
+
+        <text class="s4bH" x="30" y="26">TWELVE LINES, ONE PULLED OUT</text>
+        <text class="s4bS" x="250" y="26">eleven stay single sentences; one gets ninety seconds, chosen by the false belief it prevents</text>
+
+        <g filter="url(#s4bSk)" fill="none" stroke="#0F231B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <!-- the enlarged card -->
+          <rect x="180" y="52" width="600" height="140" rx="8" transform="rotate(-0.5 480 122)" fill="#FBE9F4" stroke="#8E2C6B"/>
+          <!-- arrow from the gap up to the card -->
+          <path d="M192 250 C192 232 216 218 236 200" stroke="#8E2C6B" marker-end="url(#s4bAr)"/>
+          <!-- the deck: twelve slots, 56 wide, 6 gap, from x=40 -->
+          <rect x="40" y="256" width="56" height="76" rx="4" transform="rotate(-0.8 68 294)" fill="#FFFFFF"/>
+          <rect x="102" y="256" width="56" height="76" rx="4" transform="rotate(0.6 130 294)" fill="#FFFFFF"/>
+          <rect x="164" y="256" width="56" height="76" rx="4" stroke="#8E2C6B" stroke-dasharray="5 4"/>
+          <rect x="226" y="256" width="56" height="76" rx="4" transform="rotate(-0.5 254 294)" fill="#FFFFFF"/>
+          <rect x="288" y="256" width="56" height="76" rx="4" transform="rotate(0.7 316 294)" fill="#FFFFFF"/>
+          <rect x="350" y="256" width="56" height="76" rx="4" transform="rotate(-0.6 378 294)" fill="#FFFFFF"/>
+          <rect x="412" y="256" width="56" height="76" rx="4" transform="rotate(0.5 440 294)" fill="#FFFFFF"/>
+          <rect x="474" y="256" width="56" height="76" rx="4" transform="rotate(-0.9 502 294)" fill="#FFFFFF"/>
+          <rect x="536" y="256" width="56" height="76" rx="4" transform="rotate(0.8 564 294)" fill="#FFFFFF"/>
+          <rect x="598" y="256" width="56" height="76" rx="4" transform="rotate(-0.4 626 294)" fill="#FFFFFF"/>
+          <rect x="660" y="256" width="56" height="76" rx="4" transform="rotate(0.6 688 294)" fill="#FFFFFF"/>
+          <rect x="722" y="256" width="56" height="76" rx="4" transform="rotate(-0.7 750 294)" fill="#FFFFFF"/>
+          <!-- a line of text on each small card -->
+          <path d="M50 306 L86 306 M112 306 L148 306 M236 306 L272 306 M298 306 L334 306 M360 306 L396 306 M422 306 L458 306 M484 306 L520 306 M546 306 L582 306 M608 306 L644 306 M670 306 L706 306 M732 306 L768 306" stroke="#C3DDD3"/>
+          <path d="M50 318 L78 318 M112 318 L140 318 M236 318 L264 318 M298 318 L326 318 M360 318 L388 318 M422 318 L450 318 M484 318 L512 318 M546 318 L574 318 M608 318 L636 318 M670 318 L698 318 M732 318 L760 318" stroke="#C3DDD3"/>
+          <!-- Farid's phone, the doodle anchor -->
+          <rect x="818" y="74" width="34" height="60" rx="6" transform="rotate(4 835 104)" fill="#FFFFFF"/>
+          <path d="M826 90 L846 90 M826 100 L842 100 M826 110 L846 110"/>
+        </g>
+
+        <text class="s4bB" x="198" y="76">THE ONE: THE ASSISTANT DRAFTS, A PERSON KEEPS THE DECISIONS</text>
+        <text class="s4bS" x="198" y="100">What it is: it drafts the lookups; a person reads every draft and presses send.</text>
+        <text class="s4bS" x="198" y="122">Why: a yes to a substitute is the manager's alone, and the law wants a record.</text>
+        <text class="s4bS" x="198" y="144">Farid's morning: the plain OKs arrive drafted; the one in twenty arrives flagged.</text>
+        <text class="s4bB" x="198" y="174">ninety seconds, three sentences, and "it replies on its own" never forms</text>
+        <text class="s4bS" x="835" y="152" text-anchor="middle">Farid</text>
+
+        <text class="s4bV" x="68" y="284" text-anchor="middle">1</text>
+        <text class="s4bV" x="130" y="284" text-anchor="middle">2</text>
+        <text class="s4bB" x="192" y="284" text-anchor="middle">3</text>
+        <text class="s4bV" x="254" y="284" text-anchor="middle">4</text>
+        <text class="s4bV" x="316" y="284" text-anchor="middle">5</text>
+        <text class="s4bV" x="378" y="284" text-anchor="middle">6</text>
+        <text class="s4bV" x="440" y="284" text-anchor="middle">7</text>
+        <text class="s4bV" x="502" y="284" text-anchor="middle">8</text>
+        <text class="s4bV" x="564" y="284" text-anchor="middle">9</text>
+        <text class="s4bV" x="626" y="284" text-anchor="middle">10</text>
+        <text class="s4bV" x="688" y="284" text-anchor="middle">11</text>
+        <text class="s4bV" x="750" y="284" text-anchor="middle">12</text>
+        <text class="s4bS" x="192" y="322" text-anchor="middle">pulled</text>
+
+        <text class="s4bN" x="30" y="350">1-2 outcome · 3-4 decision · 5-6 current way · 7-8 data state · 9-10 constraints · 11-12 success</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - the pulled card is the only one that gets three sentences, and it is chosen by the belief it prevents</figcaption>
+    </figure>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>Choosing the one<span class="mini">2 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Look at the five false beliefs the bench records on the fast run, because each one is a concept that was never explained. "The assistant replies to suppliers on its own" attaches to drafts versus decisions. "The orders are in English" attaches to what the assistant has to read: English, Malay and Chinese, with product nicknames. "There is an order table to match against" attaches to where the other half of the match lives, which is another WhatsApp group. "Mistakes are rare and cheap" attaches to the error rate today as the bar. "The managers will use a separate app" attaches to the tool living where the people already are. Pick the belief most likely to form in <em>this</em> meeting with <em>this</em> person, and the concept behind it is your one.</p>
+        <p>For Harbourline there are two honest candidates. <strong>The assistant drafts the lookups and a person keeps the decisions</strong>, because "so the assistant should reply to the suppliers automatically?" is the belief waiting to happen the moment anyone says the word AI, and on the bench it is the first question of the fast run, recorded in minute one at a cost of 4, the highest in the bank alongside the order table. Or <strong>the other half of the match lives somewhere else</strong>, because she will assume the assistant can check a confirmation against an order, and there is no order table anywhere, only another group typed in three languages. Either is right. Choose one, not both; two concepts in ninety seconds each is a lecture with an interval. For an AI developer facing this request, the first wins, because it is the one that decides whether anything ever replies on its own.</p>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>The ninety-second version<span class="mini">2 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Three sentences, in a fixed order: what it is, why it matters, what it means for a real morning. Written in full for this concept, as it would be said after "in a thread, which replies need a person to decide, and which are just looking something up?" and her answer that only the area manager may say yes to a substitute or a price change:</p>
+        <p><strong>What it is.</strong> "An assistant can do the looking-up half of a thread, checking the supplier's confirmation against what the outlet asked for and writing the reply, but it only ever drafts; a person reads the draft and presses send, every time." <strong>Why a substitution is a decision.</strong> "Saying yes to a substitute product or a price change is not a lookup, it is a choice only the area manager may make, because a pharmacy product needs a substitution record by law and a wrong drug on a shelf is not a customer-service problem." <strong>Farid's morning.</strong> "Of his forty or so threads a day, about four in five end in a plain OK, so those arrive as drafts he checks and sends, and the one confirmation in twenty with a wrong price or a substitute in it arrives in front of him marked, with the match shown, so his attention goes where the decisions are."</p>
+        <p>Ninety seconds, then back to the next question. The tell that it worked is that she uses the word "draft" later in the meeting on her own, as in "and the drafts would still come to Farid?", rather than asking whether it can be switched to automatic.</p>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>The test that she could repeat it to her board<span class="mini">2 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>The board meets in six weeks and wants the word AI on a slide. When a director asks Adeline what the AI developer said, if the one concept landed she can say something like "the assistant writes the easy replies, and a manager still says yes or no to every substitute, so nothing reaches a supplier without a person." That sentence is the whole test: it is hers, it is short, it carries the reason, and it would survive the sceptical follow-up she has already asked herself, the one about the chatbot she switched off.</p>
+        <p>Write the sentence you hope she says before the meeting. It forces the ninety seconds to be built backwards from a line a person who runs pharmacies could carry into a boardroom, and it is the cheapest rehearsal there is. It also tells you something about the choice itself: if you cannot write a one-line version a board member would repeat, you have picked an idea that matters to you and not to her.</p>
+      </div>
+    </details>
+
+    <div class="callout example">
+      <span class="ex-pill">Real world</span>
+      <p><strong>The wrong one.</strong> Constructed. A developer chose "the product list is the assistant's dictionary" as the concept for Adeline's meeting, explained it well, and she repeated it perfectly. Two weeks later the first demo sent a plain OK to a supplier on its own, and the confirmation it had approved carried a substitute on its seventh line. Nobody had said out loud that every reply is a draft, and "so it would just reply to them?" had gone unchallenged in the first minute. The concept she learned was true. It was the wrong one for that meeting, because the belief waiting to form was about who presses send, not about what the assistant can look up.</p>
+    </div>
+  </section>
+
+  <section class="section" id="part-3">
+    <div class="section-kicker">
+      <span class="klabel">Part 3 · covers the difference between teaching and talking</span>
+      <h2>Lesson, not lecture</h2>
+      <span class="tag concept">4 min live</span>
+    </div>
+    <p class="lede">A teach-back line passes three tests: plain, true, one sentence. The third is the one developers fail, because the moment a line touches how the thing would be built it wants a second sentence about the architecture, and then a third about the trade-off. The tell of a lecture is easy to hear from across the room: she stops answering and starts nodding. Rob Fitzpatrick's third rule for talking to customers, talk less, is the whole discipline, and it applies with extra force to the person who is supposedly asking the questions.</p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Two hand-drawn 45-minute timelines, constructed illustrations and not measurements. The top rail, labelled lecture, is mostly a long hatched bar of the developer talking with short white gaps. The bottom rail, labelled lesson, is mostly white stretches of the operations director talking, interrupted by short plum ticks, one per teach-back line. Minute marks at 0, 15, 30 and 45 sit under both rails.">
+        <defs>
+          <filter id="s4cSk" x="-3%" y="-3%" width="106%" height="106%"><feTurbulence type="fractalNoise" baseFrequency="0.02" numOctaves="2" seed="67" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="2.4" xChannelSelector="R" yChannelSelector="G"/></filter>
+          <pattern id="s4cHc" patternUnits="userSpaceOnUse" width="7" height="7" patternTransform="rotate(-38)"><line x1="0" y1="0" x2="0" y2="7" stroke="#047857" stroke-width="1" opacity=".5"/></pattern>
+          <marker id="s4cAr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M1 1 L9 5 L1 9" fill="none" stroke="#0F231B" stroke-width="1.6" stroke-linecap="round"/></marker>
+        </defs>
+        <style>
+          .s4cH { font: 800 12px Inter, sans-serif; fill: #0F231B; }
+          .s4cL { font: 600 12px Inter, sans-serif; fill: #0F231B; }
+          .s4cS { font: 400 11px Inter, sans-serif; fill: #46605A; }
+          .s4cB { font: 800 11px Inter, sans-serif; fill: #6A1F50; }
+          .s4cA { font: 700 11px Inter, sans-serif; fill: #047857; }
+          .s4cN { font: 400 12px Inter, sans-serif; fill: #46605A; }
+        </style>
+
+        <text class="s4cH" x="30" y="26">TWO MEETINGS, 45 MINUTES EACH</text>
+        <text class="s4cS" x="270" y="26">hatched is the developer talking; white is her talking; plum is a teach-back line · drawn, not measured</text>
+
+        <g filter="url(#s4cSk)" fill="none" stroke="#0F231B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <!-- clock anchor -->
+          <circle cx="44" cy="106" r="14"/>
+          <path d="M44 106 L44 96 M44 106 L51 110"/>
+          <!-- top rail: lecture -->
+          <rect x="80" y="86" width="720" height="40" rx="4" transform="rotate(-0.3 440 106)" fill="#FFFFFF"/>
+          <rect x="82" y="88" width="176" height="36" fill="url(#s4cHc)" stroke="none"/>
+          <rect x="274" y="88" width="198" height="36" fill="url(#s4cHc)" stroke="none"/>
+          <rect x="488" y="88" width="214" height="36" fill="url(#s4cHc)" stroke="none"/>
+          <rect x="716" y="88" width="82" height="36" fill="url(#s4cHc)" stroke="none"/>
+          <!-- bottom rail: lesson -->
+          <rect x="80" y="196" width="720" height="40" rx="4" transform="rotate(0.4 440 216)" fill="#FFFFFF"/>
+          <rect x="94" y="198" width="6" height="36" fill="#8E2C6B" stroke="#8E2C6B"/>
+          <rect x="158" y="198" width="6" height="36" fill="#8E2C6B" stroke="#8E2C6B"/>
+          <rect x="222" y="198" width="6" height="36" fill="#8E2C6B" stroke="#8E2C6B"/>
+          <rect x="286" y="198" width="6" height="36" fill="#8E2C6B" stroke="#8E2C6B"/>
+          <rect x="350" y="198" width="6" height="36" fill="#8E2C6B" stroke="#8E2C6B"/>
+          <rect x="414" y="198" width="6" height="36" fill="#8E2C6B" stroke="#8E2C6B"/>
+          <rect x="478" y="198" width="6" height="36" fill="#8E2C6B" stroke="#8E2C6B"/>
+          <rect x="542" y="198" width="6" height="36" fill="#8E2C6B" stroke="#8E2C6B"/>
+          <rect x="606" y="198" width="6" height="36" fill="#8E2C6B" stroke="#8E2C6B"/>
+          <rect x="670" y="198" width="6" height="36" fill="#8E2C6B" stroke="#8E2C6B"/>
+          <rect x="734" y="198" width="6" height="36" fill="#8E2C6B" stroke="#8E2C6B"/>
+          <!-- minute marks -->
+          <path d="M80 132 L80 140 M320 132 L320 140 M560 132 L560 140 M800 132 L800 140" stroke="#46605A"/>
+          <path d="M80 242 L80 250 M320 242 L320 250 M560 242 L560 250 M800 242 L800 250" stroke="#46605A"/>
+        </g>
+
+        <text class="s4cL" x="80" y="72">LECTURE</text>
+        <text class="s4cS" x="150" y="72">she stops answering and starts nodding; the gaps are her saying "right"</text>
+        <text class="s4cA" x="80" y="156" text-anchor="middle">0 min</text>
+        <text class="s4cA" x="320" y="156" text-anchor="middle">15</text>
+        <text class="s4cA" x="560" y="156" text-anchor="middle">30</text>
+        <text class="s4cA" x="800" y="156" text-anchor="middle">45</text>
+
+        <text class="s4cB" x="80" y="182">LESSON</text>
+        <text class="s4cS" x="140" y="182">she talks; each tick is one plain sentence before a question, and the white stretches are the facts arriving</text>
+        <text class="s4cA" x="80" y="266" text-anchor="middle">0 min</text>
+        <text class="s4cA" x="320" y="266" text-anchor="middle">15</text>
+        <text class="s4cA" x="560" y="266" text-anchor="middle">30</text>
+        <text class="s4cA" x="800" y="266" text-anchor="middle">45</text>
+
+        <text class="s4cN" x="30" y="290">Both rails are constructed illustrations of a shape, not recordings of a meeting. Teaching happens in the ticks.</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - constructed, not measured; the lesson rail is mostly white because most of a good meeting is her talking</figcaption>
+    </figure>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>Plain, true, one sentence<span class="mini">2 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p><strong>Failing</strong>, before "who can log in to the POS back office and pull the product list?": "Credential provisioning is usually the critical path on AI projects, because if the POS admin account is a single point of failure we would want a service account and scoped API access before any ingestion work starts." True, and it fails all three tests at once: half a dozen words she would ask about, two claims joined into one, and a second sentence hiding inside the first.</p>
+        <p><strong>Passing</strong>, same question, the line from the bank: "Access is the first blocker on most projects, so I ask early and I ask by name." Plain, because every word is one she uses; true, because it is a real principle of how these projects stall; one sentence, so she is answering again within three seconds. The failing version would have earned a nod. The passing version, asked after a run of open questions had built trust, earns the fact behind the highest trust gate on her sheet: Kenneth is the only IT person, holds the POS admin login, and is leaving in January, and she has not told the team.</p>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>When she asks a follow-up, you have a lesson<span class="mini">2 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>There is only one proof that a line taught something, and it is a follow-up question from her. "So who presses send?" means drafts versus decisions landed. "Wait, so it would have to read the outlets' group as well?" means the other half of the match landed. A nod proves nothing, and a polite "makes sense" proves slightly less than nothing, because it closes the topic. Silence after a teach-back line is a reason to ask your next question, not to add a sentence.</p>
+        <p>On the bench this is the mechanism, not a metaphor. Every open question earns a point of trust, and eight of the facts on her sheet sit behind trust gates she will not cross unprompted: seven need one point, and the Kenneth fact needs three. The teach-back line is where the point is earned: she answers the next question more fully because the last one came with a reason. A lecture spends minutes and earns nothing, which is the same arithmetic as the technical opener in session 3 with a friendlier face.</p>
+      </div>
+    </details>
+
+    <div class="callout example">
+      <span class="ex-pill">Real world</span>
+      <p><strong>The follow-up that changed the build.</strong> Constructed. After "if the record is a phone, the first thing an assistant should produce is a log, before it produces a single answer", Adeline asked: "so when the area manager left in March and took her phone, every substitute she ever approved went with her?" That question was the lesson landing and the project changing shape in the same breath. It moved the first piece of work from an assistant that writes replies to a shared record of every accepted substitute and price change, which is where session 5 will find it.</p>
+    </div>
+  </section>
+
+  <section class="section" id="demo-1">
+    <div class="section-kicker">
+      <span class="klabel">Build-along</span>
+      <h2>Make your twelve lines plain for Adeline</h2>
+      <span class="tag demo">★ 22 min · everyone writes</span>
+    </div>
+    <p class="lede">The sheet from session 1, teach-back column only. Twelve lines go in as you wrote them and come out with every word she would have to ask about replaced, still one sentence each. Then one is chosen and given its ninety seconds. If you did not bring a sheet, the twelve lines from the bank are printed in step 1, two per door in the printed order, and they need the same work; several were written by a developer too. For scale: on the bench, the tuned order gets through eleven open questions before the 45 minutes run out, so twelve lines is a full meeting's worth.</p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 330" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="The session 1 sheet redrawn with the teach-back column made wide. Three rows are shown, lines 3, 5 and 8, each with the line as first written in muted text and struck through, and the plain line beneath it in ink. Line 3, the decision door, carries a plum mark in the margin as the chosen concept: the assistant drafts the lookups and a person keeps every yes to a substitute.">
+        <defs>
+          <filter id="s4dSk" x="-3%" y="-3%" width="106%" height="106%"><feTurbulence type="fractalNoise" baseFrequency="0.02" numOctaves="2" seed="71" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="2.4" xChannelSelector="R" yChannelSelector="G"/></filter>
+          <pattern id="s4dHc" patternUnits="userSpaceOnUse" width="7" height="7" patternTransform="rotate(-38)"><line x1="0" y1="0" x2="0" y2="7" stroke="#047857" stroke-width="1" opacity=".5"/></pattern>
+          <marker id="s4dAr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M1 1 L9 5 L1 9" fill="none" stroke="#0F231B" stroke-width="1.6" stroke-linecap="round"/></marker>
+        </defs>
+        <style>
+          .s4dH { font: 800 12px Inter, sans-serif; fill: #0F231B; }
+          .s4dL { font: 700 11px Inter, sans-serif; fill: #0F231B; }
+          .s4dS { font: 400 11px Inter, sans-serif; fill: #46605A; }
+          .s4dB { font: 800 11px Inter, sans-serif; fill: #6A1F50; }
+          .s4dA { font: 700 11px Inter, sans-serif; fill: #047857; letter-spacing: .05em; }
+          .s4dN { font: 400 12px Inter, sans-serif; fill: #46605A; }
+        </style>
+
+        <text class="s4dH" x="30" y="26">THE SHEET AGAIN, TEACH-BACK COLUMN WIDE</text>
+
+        <g filter="url(#s4dSk)" fill="none" stroke="#0F231B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <!-- the page, the doodle anchor -->
+          <rect x="60" y="44" width="720" height="250" rx="4" transform="rotate(-0.3 420 169)" fill="#FFFFFF"/>
+          <!-- header band -->
+          <rect x="76" y="56" width="688" height="26" rx="4" fill="url(#s4dHc)"/>
+          <!-- row rules -->
+          <path d="M76 108 L764 108 M76 168 L764 168 M76 228 L764 228 M76 286 L764 286" stroke="#C3DDD3"/>
+          <!-- column rules: line and door, question, teach-back -->
+          <path d="M176 90 L176 286 M350 90 L350 286" stroke="#C3DDD3" stroke-dasharray="4 4"/>
+          <!-- strike-throughs on the before lines -->
+          <path d="M360 127 L624 127" stroke="#8E2C6B"/>
+          <path d="M360 187 L597 187" stroke="#8E2C6B"/>
+          <path d="M360 247 L619 247" stroke="#8E2C6B"/>
+          <!-- the mark on the chosen row -->
+          <circle cx="42" cy="136" r="9" fill="#8E2C6B" stroke="#8E2C6B"/>
+        </g>
+
+        <text class="s4dS" x="86" y="73">request, in her words: "Can AI answer the supplier WhatsApps?"</text>
+        <text class="s4dA" x="84" y="100">LINE, DOOR</text>
+        <text class="s4dA" x="184" y="100">THE QUESTION</text>
+        <text class="s4dA" x="360" y="100">TEACH-BACK, BEFORE AND AFTER</text>
+
+        <text class="s4dB" x="84" y="130">3 Decision</text>
+        <text class="s4dS" x="184" y="130">which replies need</text>
+        <text class="s4dS" x="184" y="145">a person to decide?</text>
+        <text class="s4dS" x="360" y="130">the model handles lookup intents; the rest go to HITL</text>
+        <text class="s4dL" x="360" y="146">the assistant drafts the lookups, and a person</text>
+        <text class="s4dL" x="360" y="161">keeps every yes to a substitute</text>
+
+        <text class="s4dL" x="84" y="190">5 Current way</text>
+        <text class="s4dS" x="184" y="190">show me one thread</text>
+        <text class="s4dS" x="184" y="205">from yesterday</text>
+        <text class="s4dS" x="360" y="190">the as-is workflow is the spec for the automation</text>
+        <text class="s4dL" x="360" y="206">the way you do it today is the plan, because I cannot</text>
+        <text class="s4dL" x="360" y="221">copy a step I have not watched a person do</text>
+
+        <text class="s4dL" x="84" y="250">8 Data state</text>
+        <text class="s4dS" x="184" y="250">personal phones, or a</text>
+        <text class="s4dS" x="184" y="265">business account?</text>
+        <text class="s4dS" x="360" y="250">no WhatsApp Business API means no ingestion path</text>
+        <text class="s4dL" x="360" y="266">where the messages live decides whether the</text>
+        <text class="s4dL" x="360" y="281">assistant can even read them</text>
+
+        <text class="s4dB" x="796" y="130">the one</text>
+        <text class="s4dB" x="796" y="145">concept,</text>
+        <text class="s4dB" x="796" y="160">line 3</text>
+
+        <text class="s4dN" x="30" y="318">Struck lines are true. They are struck because she would have had to ask about them, and she would not have asked.</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - the column that was narrowest on the session 1 sheet is the one that outlives the meeting</figcaption>
+    </figure>
+
+    <div class="steps">
+      <div class="step">
+        <p><strong>Paste your twelve teach-back lines as they are.</strong> No editing yet. If you have no sheet, these twelve are the bank's, two per door in the printed order, quoted exactly, and they are the raw material for the rest of the steps.</p>
+        <div class="prompt-box good"><span class="label">★ Step 1 · the twelve, as written</span>1  A chatbot is a tool. I need the outcome, because I can check a tool against an outcome and not the other way round.
+2  Whatever they are measured on is the number the assistant should move. Everything else is nice to have.
+3  I split every workflow into lookups and decisions. Assistants do lookups, people keep decisions, and the line between them is yours to draw.
+4  The worst case sets how much checking the assistant needs. A wrong delivery time and a wrong drug are not the same mistake.
+5  The workflow as it happens today is the spec. I cannot automate a step I have not watched a person do.
+6  The error rate today is the bar any assistant has to beat, and how you catch errors is the part the assistant has to keep.
+7  An assistant can only match what it can look up. The product list is its dictionary.
+8  Where the messages live decides whether an assistant can even read them. That is a setup question, not a model question.
+9  I ask for the limits first so I do not propose something you could never approve.
+10 A tool outside the app people already use is a tool nobody opens. The device and the app decide the design.
+11 If we agree on the test now, neither of us argues about it later. A visit log beats a satisfaction score.
+12 The person who trials it is the person who will defend it. I pick them before I pick a model.</div>
+      </div>
+      <div class="step">
+        <p><strong>Circle every word she would have to ask about.</strong> Read each line aloud to the person next to you. Mark the word at the moment their face changes, not the word you suspect. In the bank's twelve, look hard at "workflow", "spec", "setup", "model" and "the device": each is borderline, and borderline means circle it.</p>
+        <div class="prompt-box good"><span class="label">★ Step 2 · the circles</span>3  I split every [workflow] into lookups and decisions ...
+5  The [workflow] as it happens today is the [spec]. I cannot automate a step ...
+8  ... That is a [setup] question, not a [model] question.
+10 ... [The device] and the app decide the design.
+12 ... I pick them before I pick a [model].
+Your own sheet will have more. "Prompt", "fine-tune", "RAG", "eval" and "guardrail" are the usual five.</div>
+      </div>
+      <div class="step">
+        <p><strong>Replace each circled word, keeping one sentence.</strong> The replacement is the plain thing the word stands for, and it is allowed to be longer than the word it replaces. It is not allowed to become a second sentence.</p>
+        <div class="prompt-box good"><span class="label">★ Step 3 · the replacements</span>5  The way you do it today is the plan, because I cannot copy a step I have not watched a person do.
+8  Where the messages live decides whether the assistant can even read them, and that is a question about your phones, not about the AI.
+10 A tool outside WhatsApp is a tool nobody opens, so the phone and the app decide what it looks like.
+12 The person who trials it is the person who will defend it, so I pick them before I pick any software.</div>
+      </div>
+      <div class="step">
+        <p><strong>Read all twelve aloud and cut any that became two.</strong> The test is a breath: if you had to take one in the middle, it is two sentences wearing a full stop or a semicolon. Cut the weaker half. If the second half was the important half, keep that and cut the first. Line 3 is the clearest case in the bank.</p>
+        <div class="prompt-box good"><span class="label">★ Step 4 · one that became two, and the cut</span>Before:  I split every workflow into lookups and decisions. Assistants do lookups, people keep decisions, and the line between them is yours to draw.
+After:   The assistant does the looking-up, people keep the decisions, and the line between them is yours to draw.</div>
+      </div>
+      <div class="step">
+        <p><strong>Choose the one concept and write its ninety-second version.</strong> Pick by the false belief most likely to form in this meeting. Three sentences in the fixed order: what it is, why it matters, what it means for a real morning. Mark that row on the sheet.</p>
+        <div class="prompt-box good"><span class="label">★ Step 5 · the one, chosen and written</span>Concept: the assistant drafts the lookups, a person keeps the decisions   (line 3, decision door)
+Belief it prevents: "So the assistant should reply to the suppliers automatically?"
+What it is:      It checks the confirmation against the outlet's order and writes the reply, but it only drafts; a person presses send.
+Why it matters:  A yes to a substitute or a price change is the area manager's alone, and a pharmacy substitute needs a record by law.
+Farid's morning: The plain OKs, about four in five, arrive drafted; the one in twenty with a wrong price or a substitute arrives marked.</div>
+      </div>
+      <div class="step">
+        <p><strong>Write the sentence you hope she says to her board.</strong> One line, in her voice, that a board member would accept in six weeks' time. If you cannot write it, go back to step 5 and pick a concept that matters to her rather than to you.</p>
+        <div class="prompt-box good"><span class="label">★ Step 6 · her sentence</span>"The assistant writes the easy replies, and a manager still says yes or no to every substitute, so nothing reaches a supplier without a person."</div>
+      </div>
+    </div>
+
+    <div class="callout tip">
+      <p><strong>The teach-back lines are the part of the meeting that outlives it.</strong> The facts go into your notes and then into session 5's three projects. The lines go into her, and she carries them into the board meeting you are not in. Keep the plain column; session 6's one-page brief reuses the same words, so that what she reads in 24 hours matches what she heard, and "draft" means the same thing on the page as it did in the room.</p>
+    </div>
+  </section>
+
+  <section class="section" id="exercise">
+    <div class="section-kicker">
+      <span class="klabel">Homework</span>
+      <h2>Before session 5</h2>
+      <span class="tag exercise">30 min</span>
+    </div>
+    <ol>
+      <li><strong>Make the lines plain for a real request.</strong> Take the sheet you built in session 1 for something on your own desk, ideally a request that starts "can AI do...", and run steps 2 to 4 on its teach-back column. Keep the before and after side by side; the difference is the lesson.</li>
+      <li><strong>Record yourself asking three questions</strong>, each with its teach-back line, on your phone. Play it back and count the words the business person would have to ask about. Model words hide best, because the newspapers have made them sound familiar; most people find one per line on the first pass and none on the third.</li>
+      <li><strong>Pick the one concept for your next meeting.</strong> Name the false belief it prevents, write the three sentences, and write the line you hope the business person repeats upward. If the request involves anything that would reply, send or approve, test whether drafts versus decisions is the one before you consider any other.</li>
+      <li><strong>Bring the plain sheet to session 5.</strong> Her answers become three projects there, and the words you settled on tonight, draft, decision, record, become the words those projects are named in.</li>
+    </ol>
+  </section>
+
+  <section class="section" id="quiz">
+    <div class="section-kicker">
+      <span class="klabel">Check yourself</span>
+      <h2>Three questions</h2>
+    </div>
+    <p>Clear all three and session 4 gets stamped in your passport.</p>
+
+    <div class="quiz-q" data-answer="1">
+      <p class="qtext">1 · What does the curse of knowledge predict about an AI developer's own teach-back lines, and why is reading them aloud the test?</p>
+      <button class="qopt" type="button">A · The developer will write lines that are too simple, because they underestimate the business person</button>
+      <button class="qopt" type="button">B · The developer cannot hear their own jargon from the inside, so lines that feel plain to them carry words like "model", "eval" or "hallucination" that she would have to ask about; only another person's face, in real time, shows which words those are, because on paper the writer hears the whole build behind every word</button>
+      <button class="qopt" type="button">C · Business people cannot learn how AI works, so the lines should be dropped</button>
+      <button class="qopt" type="button">D · Reading aloud makes the lines shorter, which is the main goal</button>
+      <p class="qwhy">Camerer, Loewenstein and Weber's finding is that the better-informed person cannot fully set their knowledge aside when predicting what the less-informed person understands. "Retrieval" and "grounds" are invisible to the person who uses them daily, and "hallucination" is worse, because it sounds familiar enough to nod at. The listener's "sorry, what do you mean?" is the only reliable detector, and she will usually nod instead, which is why you read to a colleague first.</p>
+    </div>
+
+    <div class="quiz-q" data-answer="3">
+      <p class="qtext">2 · Why is "the assistant drafts the lookups and a person keeps the decisions" the one concept for Adeline's meeting?</p>
+      <button class="qopt" type="button">A · Because it is the most technically interesting idea in the build</button>
+      <button class="qopt" type="button">B · Because it is the one the developer can explain best</button>
+      <button class="qopt" type="button">C · Because the decision door is always the one that gets ninety seconds</button>
+      <button class="qopt" type="button">D · Because the one concept is chosen by the false belief most likely to form, and "so the assistant should reply to the suppliers automatically?" is waiting in this meeting: it is the first question of the fast run on the bench, it costs 4, and a yes to a substitute is the area manager's alone and needs a record by law, so an unexplained concept here ships as a bot approving a substitute nobody checked</button>
+      <p class="qwhy">The runner-up is "the other half of the match lives somewhere else", because there is no order table, only another group in three languages. Both are chosen by the belief they prevent, not by how interesting they are. A developer who picks "the product list is its dictionary" and explains it beautifully can still demo an assistant that says OK on its own.</p>
+    </div>
+
+    <div class="quiz-q" data-answer="0">
+      <p class="qtext">3 · What separates a lesson from a lecture, and what is the only proof that a line taught something?</p>
+      <button class="qopt" type="button">A · A lesson is one plain, true sentence before a question and she keeps talking; a lecture is the second and third sentence about the architecture, and the tell is that she stops answering and starts nodding. The only proof of teaching is a follow-up question from her, such as "so who presses send?", because a nod proves nothing and "makes sense" closes the topic</button>
+      <button class="qopt" type="button">B · A lesson uses a live demo; a lecture does not. The proof is that she thanks you</button>
+      <button class="qopt" type="button">C · A lesson is longer than a lecture because it goes into more depth. The proof is that she takes notes</button>
+      <button class="qopt" type="button">D · There is no difference; both are the developer explaining. The proof is a follow-up email</button>
+      <p class="qwhy">Fitzpatrick's third rule, talk less, is the whole discipline. On the bench the mechanism is trust: every open question earns a point, eight facts sit behind trust gates, and the teach-back line is where the point is earned. A lecture spends minutes and earns nothing, the same arithmetic as the technical opener with a friendlier face.</p>
+    </div>
+
+    <p class="quiz-score"></p>
+  </section>
+
+  <section class="section" id="official">
+    <div class="section-kicker">
+      <span class="klabel">Sources covered</span>
+      <h2>What this session teaches, and where it came from</h2>
+    </div>
+    <div class="covered">
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">The curse of knowledge, the term and the finding</span><span class="note">Camerer, Loewenstein and Weber, "The Curse of Knowledge in Economic Settings", Journal of Political Economy 97(5), 1989. One paragraph here; Tech Writing session 1 teaches it in depth</span></div>
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">Talk less; the third rule</span><span class="note">Rob Fitzpatrick, The Mom Test, 2013; reported from summaries, and only his verified wording is quoted anywhere on these pages</span></div>
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">Measurement as a plain sentence</span><span class="note">Douglas W. Hubbard, How to Measure Anything, 3rd ed., Wiley, 2014; definition reported as it appears across sources, book not opened here</span></div>
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">The twelve teach-back lines, the five false beliefs and the trust gates</span><span class="note">Quoted from the bench's printed bank file; the fast-run order and the trust mechanism are counted by the bench in session 3</span></div>
+      <div class="covered-row"><span class="status pill light">◐</span><span class="name">The plain replacements for model words</span><span class="note">Working definitions for a meeting with a person who runs pharmacies, not technical definitions; each is shorter and looser than the term it stands in for, on purpose</span></div>
+      <div class="covered-row"><span class="status pill light">◐</span><span class="name">The lecture and lesson timelines</span><span class="note">Constructed illustrations of a shape. No study of talk time in discovery meetings is cited, because none was read, and no number is claimed for either rail</span></div>
+      <div class="covered-row"><span class="status pill light">◐</span><span class="name">Harbourline, Adeline Tan, Farid and the three stories</span><span class="note">Constructed. The in-the-loop nod, the wrong concept and the lost-phone follow-up are invented to be typical, and every fact behind them is printed in the bench's bank file</span></div>
+    </div>
+    <p class="mono" style="margin-top:14px">Every fact on this page, and its verification tier, is recorded in the course's source map.</p>
+  </section>
+
+  <section class="cheat" id="cheatsheet">
+    <h3>Session 4 cheat sheet <span>· pin this</span></h3>
+    <div class="grid-2">
+      <div class="cheat-item"><b>Your curse, not hers</b><span>You cannot hear your own jargon. Read the line to someone else and watch their face.</span></div>
+      <div class="cheat-item"><b>The usual offenders</b><span>Model, prompt, fine-tune, RAG, embedding, hallucination, eval, guardrail. Each has a plain phrase.</span></div>
+      <div class="cheat-item"><b>Plain is not dumbed down</b><span>The person who signs off an assistant has to be able to check what it will do.</span></div>
+      <div class="cheat-item"><b>One concept per meeting</b><span>Ninety seconds, three sentences, chosen by the belief it prevents. Here: it drafts, a person decides.</span></div>
+      <div class="cheat-item"><b>Plain, true, one sentence</b><span>A second sentence about the architecture is a lecture. The tell: she stops answering and nods.</span></div>
+      <div class="cheat-item"><b>The only proof</b><span>A follow-up question from her, like "so who presses send?". A nod proves nothing.</span></div>
+    </div>
+  </section>
+
+  <div class="callout next">
+    <span class="nx-pill">Next session</span>
+    <p>You now have her answers in plain words and twelve lines she did not have to decode. Session 5 turns them into three candidate projects, in the order an AI developer should least like and most needs: first a shared record of every accepted substitute and price change, because the record currently lives on a phone; then a standard confirmation format written into the supplier contracts that renew in three months, because sometimes the best AI project is a form; and only then an assistant that drafts the plain-OK replies for one manager and four suppliers and never approves a substitute, because she told you she would never pilot with all 36 suppliers at once.</p>
+  </div>
+
+  <footer class="pagefoot">
+    <span>Session 4 of 6 · learn-asking-right-questions-as-ai-with-phoebe · by Phoebe Fu &nbsp;·&nbsp; 📚 <a href="https://phoebefu6.github.io/learn-with-phoebe/">Learn with Phoebe ↗</a></span>
+    <span><a href="03-the-ai-developers-questions-and-the-bench.html">← Prev: The AI developer's questions, and the bench</a> &nbsp;·&nbsp; <a href="05-three-projects-and-the-assistant-that-drafts.html">Next: Three projects, and the assistant that only drafts →</a></span>
+  </footer>
+
+</main>
+
+<script src="../assets/app.js?v=1"></script>
+</body>
+</html>
